@@ -1,0 +1,39 @@
+<mujoco model="scene">
+	<include file="panda.xml"/>
+	<include file="objects.xml"/>
+
+	<!-- Offscreen render buffer large enough for square camera images (e.g. 640x640) in case the
+	     mujoco_ros camera config is set to render square frames; then nothing is lost to CLIP's
+	     224x224 center crop. Harmless otherwise. -->
+	<visual>
+		<global offwidth="1280" offheight="1280"/>
+		<quality shadowsize="4096"/>
+	</visual>
+
+	<worldbody>
+		<geom
+			name="table"
+			type="box"
+			pos="0.0 0.0 -0.02"
+			size="0.8 0.8 0.02"
+		/>
+
+		<!-- Fixed lights: one overhead light with a single clean shadow, one soft side fill.
+		     Kept moderate so the table renders mid-gray (not blown out) in the wrist view. -->
+		<light name="scene_top"  pos="-0.4 0.0 2.5" dir="0 0 -1"       diffuse="0.45 0.45 0.45" specular="0.1 0.1 0.1"    castshadow="true"/>
+		<light name="scene_side" pos="0.8 -1.0 1.8" dir="-0.6 0.5 -0.8" diffuse="0.2 0.2 0.2"    specular="0.05 0.05 0.05" castshadow="false"/>
+
+		<!-- Third-person (eye-on-base) camera.
+		     Workspace centre is panda_link0 (0.45, 0) = world (-0.45, 0) (panda_link0 is rotated 180 deg about z).
+		     1.33 m away, 36 deg elevation, aimed 28 cm above the table so the hand + wrist stay fully in
+		     frame at pre-grasp height (20 cm above the cube) and during the lift.
+		     4 cm cube ~ 16 px in a 720x480 frame (~7 px after CLIP resize/crop) - do not go wider than this.
+		     The central 480x480 of the 720x480 frame is what the model sees. -->
+		<camera
+			name="third_person_camera"
+			pos="-0.20 1.05 1.05"
+			xyaxes="-0.973 0.232 0.000 -0.135 -0.565 0.814"
+			fovy="42"
+		/>
+	</worldbody>
+</mujoco>

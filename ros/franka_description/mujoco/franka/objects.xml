@@ -1,0 +1,32 @@
+<mujocoinclude>
+	<worldbody>
+		<body name="cube" pos="-0.3 -0.3 0.04">
+			<freejoint/>
+			<geom 
+				name="cube_geom"
+				type="box"
+				size="0.02 0.02 0.02"
+				rgba="0 0 1 0.5"
+				density="500"
+				friction="2.0 0.1 0.1"
+				contype="1"
+				conaffinity="1"
+			/>
+		</body>
+	</worldbody>
+
+	<sensor>
+		<framepos
+			name="cube_pos"
+			objtype="body"
+			objname="cube"
+		/>
+		<framequat
+			name="cube_quat"
+			objtype="body"
+			objname="cube"
+		/>
+	</sensor>
+</mujocoinclude>
+
+
