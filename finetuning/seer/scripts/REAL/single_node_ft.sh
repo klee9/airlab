@@ -1,10 +1,10 @@
-### NEED TO CHANGE ###
-save_checkpoint_path="xxx/checkpoints"
-root_dir="your_path_to_the_parent_folder_of_real_data"
-real_dataset_names="your_real_dataset_name"
-finetune_from_pretrained_ckpt="xxx/xxx.pth"
-vit_checkpoint_path="xxx/mae_pretrain_vit_base.pth" # downloaded from https://drive.google.com/file/d/1bSsvRI4mDM3Gg51C6xO0l9CbojYw3OEt/view?usp=sharing
-### NEED TO CHANGE ###
+save_checkpoint_path="/home/keon/vla_ft/Seer/checkpoints"
+root_dir="/home/keon/vla_ft/Seer/test_data"
+real_dataset_names="panda_pick_place_fixed"
+finetune_from_pretrained_ckpt="/home/keon/vla_ft/Seer/seer.pth"
+
+# Downloaded from https://drive.google.com/file/d/1bSsvRI4mDM3Gg51C6xO0l9CbojYw3OEt/view?usp=sharing
+vit_checkpoint_path="/home/keon/vla_ft/Seer/mae_pretrain_vit_base.pth"
 
 ### EXAMPLE ###
 # - root_dir
@@ -18,8 +18,9 @@ vit_checkpoint_path="xxx/mae_pretrain_vit_base.pth" # downloaded from https://dr
 ### EXAMPLE ###
 
 node=1
-node_num=8
-torchrun --nnodes=${node} --nproc_per_node=${node_num} --master_port=10211 train.py \
+node_num=4
+export CUDA_VISIBLE_DEVICES=0,1,2,3 # Change accordingly
+torchrun --nnodes=${node} --nproc_per_node=${node_num} --master_port=29511 train.py \
     --traj_cons \
     --rgb_pad 10 \
     --gripper_pad 4 \
@@ -32,7 +33,7 @@ torchrun --nnodes=${node} --nproc_per_node=${node_num} --master_port=10211 train
     --save_every_iter 100000 \
     --num_epochs 40 \
     --seed 42 \
-    --batch_size 16 \
+    --batch_size 4 \
     --precision fp32 \
     --learning_rate 1e-3 \
     --save_checkpoint \
@@ -57,8 +58,7 @@ torchrun --nnodes=${node} --nproc_per_node=${node_num} --master_port=10211 train
     --start_save_checkpoint 15 \
     --warmup_epochs 5 \
     --real_dataset_names ${real_dataset_names} \
+    --use_aug_data \
     --reset_action_token \
     --reset_obs_token \
-    --use_aug_data \
-    --report_to_wandb \
     --finetune_from_pretrained_ckpt ${finetune_from_pretrained_ckpt} \

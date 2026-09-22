@@ -47,7 +47,8 @@ class Args:
     default_prompt: str | None = None
 
     # Port to serve the policy on.
-    port: int = 8000
+    # NOTE: To prevent port collisions on a shared server, this has been changed. (8000 -> 8080)
+    port: int = 8080
     # Record the policy's behavior for debugging.
     record: bool = False
 
