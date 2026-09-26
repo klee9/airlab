@@ -1,0 +1,13 @@
+{"time":"2026-09-26T00:03:46.244724367+09:00","level":"INFO","msg":"main: starting server","port-filename":"/tmp/tmp3b9bmakd/port-1286038.txt","pid":1286038,"log-level":0,"disable-analytics":false,"shutdown-on-parent-exit":false,"enable-dcgm-profiling":false}
+{"time":"2026-09-26T00:03:46.250655751+09:00","level":"INFO","msg":"Will exit if parent process dies.","ppid":1286038}
+{"time":"2026-09-26T00:03:46.250622748+09:00","level":"INFO","msg":"server is running","addr":{"IP":"127.0.0.1","Port":41963,"Zone":""}}
+{"time":"2026-09-26T00:03:46.427031689+09:00","level":"INFO","msg":"connection: ManageConnectionData: new connection created","id":"127.0.0.1:48626"}
+{"time":"2026-09-26T00:03:47.146720953+09:00","level":"INFO","msg":"handleInformInit: received","streamId":"kuzil76z","id":"127.0.0.1:48626"}
+{"time":"2026-09-26T00:03:47.622199347+09:00","level":"INFO","msg":"handleInformInit: stream started","streamId":"kuzil76z","id":"127.0.0.1:48626"}
+{"time":"2026-09-26T01:25:45.644576188+09:00","level":"INFO","msg":"handleInformTeardown: server teardown initiated","id":"127.0.0.1:48626"}
+{"time":"2026-09-26T01:25:45.644708911+09:00","level":"INFO","msg":"connection: closing","id":"127.0.0.1:48626"}
+{"time":"2026-09-26T01:25:45.644761108+09:00","level":"INFO","msg":"server is shutting down"}
+{"time":"2026-09-26T01:25:45.644898688+09:00","level":"INFO","msg":"connection: closed successfully","id":"127.0.0.1:48626"}
+{"time":"2026-09-26T01:25:46.986183374+09:00","level":"INFO","msg":"handleInformTeardown: server shutdown complete","id":"127.0.0.1:48626"}
+{"time":"2026-09-26T01:25:46.986215084+09:00","level":"INFO","msg":"connection: ManageConnectionData: connection closed","id":"127.0.0.1:48626"}
+{"time":"2026-09-26T01:25:46.986232661+09:00","level":"INFO","msg":"server is closed"}

@@ -1,0 +1,94 @@
+{
+  "os": "Linux-5.15.0-191-generic-x86_64-with-glibc2.35",
+  "python": "CPython 3.11.15",
+  "startedAt": "2026-09-25T15:03:47.143356Z",
+  "args": [
+    "pi05_keon_lora",
+    "--exp-name=exp_005",
+    "--overwrite",
+    "--num-train-steps=10000",
+    "--log-interval=50",
+    "--lr-schedule.warmup-steps=200",
+    "--batch_size",
+    "1"
+  ],
+  "program": "/home/yina/keon/openpi/scripts/train.py",
+  "codePath": "scripts/train.py",
+  "git": {
+    "remote": "https://github.com/Physical-Intelligence/openpi",
+    "commit": "215abfb217dbac7d5f1273282331b9b1866c0479"
+  },
+  "email": "inagim49@gmail.com",
+  "root": "/home/yina/keon/openpi",
+  "host": "user",
+  "executable": "/home/yina/keon/openpi/.venv/bin/python3",
+  "codePathLocal": "scripts/train.py",
+  "cpu_count": 28,
+  "cpu_count_logical": 56,
+  "gpu": "NVIDIA RTX A5000",
+  "gpu_count": 8,
+  "disk": {
+    "/": {
+      "total": "1984866328576",
+      "used": "1666455724032"
+    }
+  },
+  "memory": {
+    "total": "270317232128"
+  },
+  "cpu": {
+    "count": 28,
+    "countLogical": 56
+  },
+  "gpu_nvidia": [
+    {
+      "name": "NVIDIA RTX A5000",
+      "memoryTotal": "25757220864",
+      "cudaCores": 8192,
+      "architecture": "Ampere"
+    },
+    {
+      "name": "NVIDIA RTX A5000",
+      "memoryTotal": "25757220864",
+      "cudaCores": 8192,
+      "architecture": "Ampere"
+    },
+    {
+      "name": "NVIDIA RTX A5000",
+      "memoryTotal": "25757220864",
+      "cudaCores": 8192,
+      "architecture": "Ampere"
+    },
+    {
+      "name": "NVIDIA RTX A5000",
+      "memoryTotal": "25757220864",
+      "cudaCores": 8192,
+      "architecture": "Ampere"
+    },
+    {
+      "name": "NVIDIA RTX A5000",
+      "memoryTotal": "25757220864",
+      "cudaCores": 8192,
+      "architecture": "Ampere"
+    },
+    {
+      "name": "NVIDIA RTX A5000",
+      "memoryTotal": "25757220864",
+      "cudaCores": 8192,
+      "architecture": "Ampere"
+    },
+    {
+      "name": "NVIDIA RTX A5000",
+      "memoryTotal": "25757220864",
+      "cudaCores": 8192,
+      "architecture": "Ampere"
+    },
+    {
+      "name": "NVIDIA RTX A5000",
+      "memoryTotal": "25757220864",
+      "cudaCores": 8192,
+      "architecture": "Ampere"
+    }
+  ],
+  "cudaVersion": "12.2"
+}

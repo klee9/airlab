@@ -1,0 +1,15 @@
+{"time":"2026-09-26T00:03:47.146956735+09:00","level":"INFO","msg":"stream: starting","core version":"0.19.11","symlink path":"/home/yina/keon/openpi/wandb/run-20260926_000347-kuzil76z/logs/debug-core.log"}
+{"time":"2026-09-26T00:03:47.62210356+09:00","level":"INFO","msg":"created new stream","id":"kuzil76z"}
+{"time":"2026-09-26T00:03:47.622186087+09:00","level":"INFO","msg":"stream: started","id":"kuzil76z"}
+{"time":"2026-09-26T00:03:47.622238914+09:00","level":"INFO","msg":"writer: Do: started","stream_id":"kuzil76z"}
+{"time":"2026-09-26T00:03:47.622244931+09:00","level":"INFO","msg":"handler: started","stream_id":"kuzil76z"}
+{"time":"2026-09-26T00:03:47.622290568+09:00","level":"INFO","msg":"sender: started","stream_id":"kuzil76z"}
+{"time":"2026-09-26T00:03:48.315834414+09:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2026-09-26T01:25:45.644753918+09:00","level":"INFO","msg":"stream: closing","id":"kuzil76z"}
+{"time":"2026-09-26T01:25:45.644817216+09:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2026-09-26T01:25:45.64485175+09:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2026-09-26T01:25:46.567862771+09:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-09-26T01:25:46.985926806+09:00","level":"INFO","msg":"handler: closed","stream_id":"kuzil76z"}
+{"time":"2026-09-26T01:25:46.986000974+09:00","level":"INFO","msg":"writer: Close: closed","stream_id":"kuzil76z"}
+{"time":"2026-09-26T01:25:46.986013321+09:00","level":"INFO","msg":"sender: closed","stream_id":"kuzil76z"}
+{"time":"2026-09-26T01:25:46.986094912+09:00","level":"INFO","msg":"stream: closed","id":"kuzil76z"}

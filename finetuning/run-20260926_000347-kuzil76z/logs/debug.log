@@ -1,0 +1,23 @@
+2026-09-26 00:03:47,137 INFO    MainThread:1286038 [wandb_setup.py:_flush():70] Current SDK version is 0.19.11
+2026-09-26 00:03:47,137 INFO    MainThread:1286038 [wandb_setup.py:_flush():70] Configure stats pid to 1286038
+2026-09-26 00:03:47,137 INFO    MainThread:1286038 [wandb_setup.py:_flush():70] Loading settings from /home/yina/.config/wandb/settings
+2026-09-26 00:03:47,137 INFO    MainThread:1286038 [wandb_setup.py:_flush():70] Loading settings from /home/yina/keon/openpi/wandb/settings
+2026-09-26 00:03:47,137 INFO    MainThread:1286038 [wandb_setup.py:_flush():70] Loading settings from environment variables
+2026-09-26 00:03:47,137 INFO    MainThread:1286038 [wandb_init.py:setup_run_log_directory():724] Logging user logs to /home/yina/keon/openpi/wandb/run-20260926_000347-kuzil76z/logs/debug.log
+2026-09-26 00:03:47,137 INFO    MainThread:1286038 [wandb_init.py:setup_run_log_directory():725] Logging internal logs to /home/yina/keon/openpi/wandb/run-20260926_000347-kuzil76z/logs/debug-internal.log
+2026-09-26 00:03:47,137 INFO    MainThread:1286038 [wandb_init.py:init():852] calling init triggers
+2026-09-26 00:03:47,138 INFO    MainThread:1286038 [wandb_init.py:init():857] wandb.init called with sweep_config: {}
+config: {'name': 'pi05_keon_lora', 'project_name': 'openpi', 'exp_name': 'exp_005', 'model': {'action_dim': 32, 'action_horizon': 16, 'max_token_len': 200, 'dtype': 'bfloat16', 'paligemma_variant': 'gemma_2b_lora', 'action_expert_variant': 'gemma_300m_lora', 'pi05': True, 'discrete_state_input': True, 'pytorch_compile_mode': 'max-autotune'}, 'weight_loader': {'params_path': 'gs://openpi-assets/checkpoints/pi05_droid/params'}, 'pytorch_weight_path': None, 'pytorch_training_precision': 'bfloat16', 'lr_schedule': {'warmup_steps': 200, 'peak_lr': 2.5e-05, 'decay_steps': 30000, 'decay_lr': 2.5e-06}, 'optimizer': {'b1': 0.9, 'b2': 0.95, 'eps': 1e-08, 'weight_decay': 1e-10, 'clip_gradient_norm': 1.0}, 'ema_decay': None, 'freeze_filter': All(PathRegex(pattern=re.compile('.*llm.*'), sep='/'), Not(PathRegex(pattern=re.compile('.*lora.*'), sep='/'))), 'data': {'repo_id': 'klee9/pi05_no_ep2', 'assets': {'assets_dir': 'gs://openpi-assets/checkpoints/pi05_droid/assets', 'asset_id': 'droid'}, 'base_config': {'repo_id': None, 'asset_id': None, 'norm_stats': None, 'repack_transforms': {'inputs': (), 'outputs': ()}, 'data_transforms': {'inputs': (), 'outputs': ()}, 'model_transforms': {'inputs': (), 'outputs': ()}, 'use_quantile_norm': False, 'action_sequence_keys': ('actions',), 'prompt_from_task': True, 'rlds_data_dir': None, 'action_space': None, 'datasets': ()}}, 'assets_base_dir': './assets', 'checkpoint_base_dir': './checkpoints', 'seed': 42, 'batch_size': 1, 'num_workers': 2, 'num_train_steps': 10000, 'log_interval': 50, 'save_interval': 1000, 'keep_period': 5000, 'overwrite': True, 'resume': False, 'wandb_enabled': True, 'policy_metadata': None, 'fsdp_devices': 1, '_wandb': {}}
+2026-09-26 00:03:47,138 INFO    MainThread:1286038 [wandb_init.py:init():893] starting backend
+2026-09-26 00:03:47,138 INFO    MainThread:1286038 [wandb_init.py:init():897] sending inform_init request
+2026-09-26 00:03:47,142 INFO    MainThread:1286038 [backend.py:_multiprocessing_setup():101] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2026-09-26 00:03:47,142 INFO    MainThread:1286038 [wandb_init.py:init():907] backend started and connected
+2026-09-26 00:03:47,146 INFO    MainThread:1286038 [wandb_init.py:init():1005] updated telemetry
+2026-09-26 00:03:47,156 INFO    MainThread:1286038 [wandb_init.py:init():1029] communicating run to backend with 90.0 second timeout
+2026-09-26 00:03:48,269 INFO    MainThread:1286038 [wandb_init.py:init():1104] starting run threads in backend
+2026-09-26 00:03:48,586 INFO    MainThread:1286038 [wandb_run.py:_console_start():2573] atexit reg
+2026-09-26 00:03:48,587 INFO    MainThread:1286038 [wandb_run.py:_redirect():2421] redirect: wrap_raw
+2026-09-26 00:03:48,587 INFO    MainThread:1286038 [wandb_run.py:_redirect():2490] Wrapping output streams.
+2026-09-26 00:03:48,587 INFO    MainThread:1286038 [wandb_run.py:_redirect():2513] Redirects installed.
+2026-09-26 00:03:48,589 INFO    MainThread:1286038 [wandb_init.py:init():1150] run started, returning control to user process
+2026-09-26 01:25:45,643 INFO    MsgRouterThr:1286038 [mailbox.py:close():129] [no run ID] Closing mailbox, abandoning 1 handles.

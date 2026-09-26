@@ -1,0 +1,712 @@
+00:03:48.714 [I] Loaded norm stats from gs://openpi-assets/checkpoints/pi05_droid/assets/droid    (1286038:config.py:196)
+00:03:48.717 [I] data_config: DataConfig(repo_id='klee9/pi05_no_ep2', asset_id='droid', norm_stats={'actions': NormStats(mean=array([-0.00472902,  0.01138824,  0.00182514,  0.02847176,  0.00134291,
+       -0.00297834,  0.00286467,  0.451404  ,  0.        ,  0.        ,
+        0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
+        0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
+        0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
+        0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
+        0.        ,  0.        ]), std=array([0.15559124, 0.30745908, 0.1514089 , 0.30116801, 0.22751769,
+       0.24581617, 0.2694818 , 0.44138649, 0.        , 0.        ,
+       0.        , 0.        , 0.        , 0.        , 0.        ,
+       0.        , 0.        , 0.        , 0.        , 0.        ,
+       0.        , 0.        , 0.        , 0.        , 0.        ,
+       0.        , 0.        , 0.        , 0.        , 0.        ,
+       0.        , 0.        ]), q01=array([-0.458 , -0.8076, -0.4472, -0.9268, -0.6456, -0.646 , -0.7616,
+        0.    ,  0.    ,  0.    ,  0.    ,  0.    ,  0.    ,  0.    ,
+        0.    ,  0.    ,  0.    ,  0.    ,  0.    ,  0.    ,  0.    ,
+        0.    ,  0.    ,  0.    ,  0.    ,  0.    ,  0.    ,  0.    ,
+        0.    ,  0.    ,  0.    ,  0.    ]), q99=array([0.4476, 0.7652, 0.448 , 0.7944, 0.6484, 0.6628, 0.7344, 0.9998,
+       0.    , 0.    , 0.    , 0.    , 0.    , 0.    , 0.    , 0.    ,
+       0.    , 0.    , 0.    , 0.    , 0.    , 0.    , 0.    , 0.    ,
+       0.    , 0.    , 0.    , 0.    , 0.    , 0.    , 0.    , 0.    ])), 'state': NormStats(mean=array([ 0.01623776,  0.2671541 , -0.01671005, -2.0255713 , -0.03266583,
+        2.34454918,  0.08269685,  0.39978886,  0.        ,  0.        ,
+        0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
+        0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
+        0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
+        0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
+        0.        ,  0.        ]), std=array([0.30769925, 0.4821603 , 0.26944264, 0.48189821, 0.53741878,
+       0.45384659, 0.74746761, 0.40705742, 0.        , 0.        ,
+       0.        , 0.        , 0.        , 0.        , 0.        ,
+       0.        , 0.        , 0.        , 0.        , 0.        ,
+       0.        , 0.        , 0.        , 0.        , 0.        ,
+       0.        , 0.        , 0.        , 0.        , 0.        ,
+       0.        , 0.        ]), q01=array([-0.82797322, -0.83983118, -0.84254821, -2.77301528, -1.84261813,
+        1.17165664, -2.04726484,  0.        ,  0.        ,  0.        ,
+        0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
+        0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
+        0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
+        0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
+        0.        ,  0.        ]), q99=array([ 0.89965229,  1.38546747,  0.69202774, -0.45420431,  1.73231424,
+        3.46729648,  2.19849721,  0.991     ,  0.        ,  0.        ,
+        0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
+        0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
+        0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
+        0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
+        0.        ,  0.        ]))}, repack_transforms=Group(inputs=[RepackTransform(structure={'observation/exterior_image_1_left': 'exterior_image_1_left', 'observation/exterior_image_2_left': 'exterior_image_2_left', 'observation/wrist_image_left': 'wrist_image_left', 'observation/joint_position': 'joint_position', 'observation/gripper_position': 'gripper_position', 'actions': 'actions', 'prompt': 'prompt'})], outputs=()), data_transforms=Group(inputs=[DroidInputs(model_type=<ModelType.PI05: 'pi05'>)], outputs=[DroidOutputs()]), model_transforms=Group(inputs=[InjectDefaultPrompt(prompt=None), ResizeImages(height=224, width=224), TokenizePrompt(tokenizer=<openpi.models.tokenizer.PaligemmaTokenizer object at 0x7f549ca86b90>, discrete_state_input=True), PadStatesAndActions(model_action_dim=32)], outputs=()), use_quantile_norm=True, action_sequence_keys=('actions',), prompt_from_task=True, rlds_data_dir=None, action_space=None, datasets=()) (1286038:data_loader.py:243)
+00:03:49.435 [I] local_batch_size: 1                                                              (1286038:data_loader.py:324)
+00:04:06.368 [I] Initialized data loader:
+[0].images['base_0_rgb']: (1, 224, 224, 3)@float32
+[0].images['left_wrist_0_rgb']: (1, 224, 224, 3)@float32
+[0].images['right_wrist_0_rgb']: (1, 224, 224, 3)@float32
+[0].image_masks['base_0_rgb']: (1,)@bool
+[0].image_masks['left_wrist_0_rgb']: (1,)@bool
+[0].image_masks['right_wrist_0_rgb']: (1,)@bool
+[0].state: (1, 32)@float32
+[0].tokenized_prompt: (1, 200)@int32
+[0].tokenized_prompt_mask: (1, 200)@bool
+[1]: (1, 16, 32)@float32 (1286038:train.py:227)
+00:04:08.436 [I] Created BasePyTreeCheckpointHandler: use_ocdbt=True, use_zarr3=False, pytree_metadata_options=PyTreeMetadataOptions(support_rich_types=False), array_metadata_store=<orbax.checkpoint._src.metadata.array_metadata_store.Store object at 0x7f562595af50> (1286038:base_pytree_checkpoint_handler.py:334)
+00:04:08.466 [I] Restoring checkpoint from /home/yina/.cache/openpi/openpi-assets/checkpoints/pi05_droid/params. (1286038:checkpointer.py:298)
+00:04:28.049 [I] [process=0] /jax/checkpoint/read/bytes_per_sec: 653.3 MiB/s (total bytes: 12.5 GiB) (time elapsed: 19 seconds) (per-host) (1286038:base_pytree_checkpoint_handler.py:114)
+00:04:28.050 [I] Finished restoring checkpoint in 19.58 seconds from /home/yina/.cache/openpi/openpi-assets/checkpoints/pi05_droid/params. (1286038:checkpointer.py:309)
+00:04:40.097 [I] Initialized train state:
+['PaliGemma']['img']['Transformer']['encoder_norm']['bias'].value: (1152,)@float32
+['PaliGemma']['img']['Transformer']['encoder_norm']['scale'].value: (1152,)@float32
+['PaliGemma']['img']['Transformer']['encoderblock']['LayerNorm_0']['bias'].value: (27, 1152)@float32
+['PaliGemma']['img']['Transformer']['encoderblock']['LayerNorm_0']['scale'].value: (27, 1152)@float32
+['PaliGemma']['img']['Transformer']['encoderblock']['LayerNorm_1']['bias'].value: (27, 1152)@float32
+['PaliGemma']['img']['Transformer']['encoderblock']['LayerNorm_1']['scale'].value: (27, 1152)@float32
+['PaliGemma']['img']['Transformer']['encoderblock']['MlpBlock_0']['Dense_0']['bias'].value: (27, 4304)@float32
+['PaliGemma']['img']['Transformer']['encoderblock']['MlpBlock_0']['Dense_0']['kernel'].value: (27, 1152, 4304)@float32
+['PaliGemma']['img']['Transformer']['encoderblock']['MlpBlock_0']['Dense_1']['bias'].value: (27, 1152)@float32
+['PaliGemma']['img']['Transformer']['encoderblock']['MlpBlock_0']['Dense_1']['kernel'].value: (27, 4304, 1152)@float32
+['PaliGemma']['img']['Transformer']['encoderblock']['MultiHeadDotProductAttention_0']['key']['bias'].value: (27, 16, 72)@float32
+['PaliGemma']['img']['Transformer']['encoderblock']['MultiHeadDotProductAttention_0']['key']['kernel'].value: (27, 1152, 16, 72)@float32
+['PaliGemma']['img']['Transformer']['encoderblock']['MultiHeadDotProductAttention_0']['out']['bias'].value: (27, 1152)@float32
+['PaliGemma']['img']['Transformer']['encoderblock']['MultiHeadDotProductAttention_0']['out']['kernel'].value: (27, 16, 72, 1152)@float32
+['PaliGemma']['img']['Transformer']['encoderblock']['MultiHeadDotProductAttention_0']['query']['bias'].value: (27, 16, 72)@float32
+['PaliGemma']['img']['Transformer']['encoderblock']['MultiHeadDotProductAttention_0']['query']['kernel'].value: (27, 1152, 16, 72)@float32
+['PaliGemma']['img']['Transformer']['encoderblock']['MultiHeadDotProductAttention_0']['value']['bias'].value: (27, 16, 72)@float32
+['PaliGemma']['img']['Transformer']['encoderblock']['MultiHeadDotProductAttention_0']['value']['kernel'].value: (27, 1152, 16, 72)@float32
+['PaliGemma']['img']['embedding']['bias'].value: (1152,)@float32
+['PaliGemma']['img']['embedding']['kernel'].value: (14, 14, 3, 1152)@float32
+['PaliGemma']['img']['head']['bias'].value: (2048,)@float32
+['PaliGemma']['img']['head']['kernel'].value: (1152, 2048)@float32
+['PaliGemma']['img']['pos_embedding'].value: (1, 256, 1152)@float32
+['PaliGemma']['llm']['embedder']['input_embedding'].value: (257152, 2048)@bfloat16
+['PaliGemma']['llm']['final_norm']['scale'].value: (2048,)@bfloat16
+['PaliGemma']['llm']['final_norm_1']['Dense_0']['bias'].value: (3072,)@bfloat16
+['PaliGemma']['llm']['final_norm_1']['Dense_0']['kernel'].value: (1024, 3072)@bfloat16
+['PaliGemma']['llm']['layers']['attn']['attn_vec_einsum']['lora_a'].value: (18, 8, 256, 16)@float32
+['PaliGemma']['llm']['layers']['attn']['attn_vec_einsum']['lora_b'].value: (18, 8, 16, 2048)@float32
+['PaliGemma']['llm']['layers']['attn']['attn_vec_einsum']['w'].value: (18, 8, 256, 2048)@bfloat16
+['PaliGemma']['llm']['layers']['attn']['attn_vec_einsum_1']['lora_a'].value: (18, 8, 256, 32)@float32
+['PaliGemma']['llm']['layers']['attn']['attn_vec_einsum_1']['lora_b'].value: (18, 8, 32, 1024)@float32
+['PaliGemma']['llm']['layers']['attn']['attn_vec_einsum_1']['w'].value: (18, 8, 256, 1024)@bfloat16
+['PaliGemma']['llm']['layers']['attn']['kv_einsum']['lora_a'].value: (18, 2, 1, 2048, 16)@float32
+['PaliGemma']['llm']['layers']['attn']['kv_einsum']['lora_b'].value: (18, 2, 1, 16, 256)@float32
+['PaliGemma']['llm']['layers']['attn']['kv_einsum']['w'].value: (18, 2, 1, 2048, 256)@bfloat16
+['PaliGemma']['llm']['layers']['attn']['kv_einsum_1']['lora_a'].value: (18, 2, 1, 1024, 32)@float32
+['PaliGemma']['llm']['layers']['attn']['kv_einsum_1']['lora_b'].value: (18, 2, 1, 32, 256)@float32
+['PaliGemma']['llm']['layers']['attn']['kv_einsum_1']['w'].value: (18, 2, 1, 1024, 256)@bfloat16
+['PaliGemma']['llm']['layers']['attn']['q_einsum']['lora_a'].value: (18, 8, 2048, 16)@float32
+['PaliGemma']['llm']['layers']['attn']['q_einsum']['lora_b'].value: (18, 8, 16, 256)@float32
+['PaliGemma']['llm']['layers']['attn']['q_einsum']['w'].value: (18, 8, 2048, 256)@bfloat16
+['PaliGemma']['llm']['layers']['attn']['q_einsum_1']['lora_a'].value: (18, 8, 1024, 32)@float32
+['PaliGemma']['llm']['layers']['attn']['q_einsum_1']['lora_b'].value: (18, 8, 32, 256)@float32
+['PaliGemma']['llm']['layers']['attn']['q_einsum_1']['w'].value: (18, 8, 1024, 256)@bfloat16
+['PaliGemma']['llm']['layers']['mlp']['gating_einsum'].value: (18, 2, 2048, 16384)@bfloat16
+['PaliGemma']['llm']['layers']['mlp']['gating_einsum_lora_a'].value: (18, 2, 2048, 16)@float32
+['PaliGemma']['llm']['layers']['mlp']['gating_einsum_lora_b'].value: (18, 2, 16, 16384)@float32
+['PaliGemma']['llm']['layers']['mlp']['linear'].value: (18, 16384, 2048)@bfloat16
+['PaliGemma']['llm']['layers']['mlp']['linear_lora_a'].value: (18, 16384, 16)@float32
+['PaliGemma']['llm']['layers']['mlp']['linear_lora_b'].value: (18, 16, 2048)@float32
+['PaliGemma']['llm']['layers']['mlp_1']['gating_einsum'].value: (18, 2, 1024, 4096)@bfloat16
+['PaliGemma']['llm']['layers']['mlp_1']['gating_einsum_lora_a'].value: (18, 2, 1024, 32)@float32
+['PaliGemma']['llm']['layers']['mlp_1']['gating_einsum_lora_b'].value: (18, 2, 32, 4096)@float32
+['PaliGemma']['llm']['layers']['mlp_1']['linear'].value: (18, 4096, 1024)@bfloat16
+['PaliGemma']['llm']['layers']['mlp_1']['linear_lora_a'].value: (18, 4096, 32)@float32
+['PaliGemma']['llm']['layers']['mlp_1']['linear_lora_b'].value: (18, 32, 1024)@float32
+['PaliGemma']['llm']['layers']['pre_attention_norm']['scale'].value: (18, 2048)@bfloat16
+['PaliGemma']['llm']['layers']['pre_attention_norm_1']['Dense_0']['bias'].value: (18, 3072)@bfloat16
+['PaliGemma']['llm']['layers']['pre_attention_norm_1']['Dense_0']['kernel'].value: (18, 1024, 3072)@bfloat16
+['PaliGemma']['llm']['layers']['pre_ffw_norm']['scale'].value: (18, 2048)@bfloat16
+['PaliGemma']['llm']['layers']['pre_ffw_norm_1']['Dense_0']['bias'].value: (18, 3072)@bfloat16
+['PaliGemma']['llm']['layers']['pre_ffw_norm_1']['Dense_0']['kernel'].value: (18, 1024, 3072)@bfloat16
+['action_in_proj']['bias'].value: (1024,)@float32
+['action_in_proj']['kernel'].value: (32, 1024)@float32
+['action_out_proj']['bias'].value: (32,)@float32
+['action_out_proj']['kernel'].value: (1024, 32)@float32
+['time_mlp_in']['bias'].value: (1024,)@float32
+['time_mlp_in']['kernel'].value: (1024, 1024)@float32
+['time_mlp_out']['bias'].value: (1024,)@float32
+['time_mlp_out']['kernel'].value: (1024, 1024)@float32 (1286038:train.py:238)
+ 10%|███████                                                                | 1000/10000 [08:11<1:11:28,  2.10it/s]00:12:51.716 [I] [process=0][thread=MainThread][wait_until_finished] No Save Finalize thread to wait for. Returning. (1286038:checkpoint_manager.py:1987)
+Step 0: grad_norm=10.4638, loss=1.5481, param_norm=1938.4991
+Step 50: grad_norm=10.5023, loss=1.5991, param_norm=1938.4994
+Step 100: grad_norm=9.0807, loss=1.4302, param_norm=1938.4994
+Step 150: grad_norm=8.2574, loss=1.1348, param_norm=1938.5006
+Step 200: grad_norm=12.0127, loss=0.8252, param_norm=1938.5031
+Step 250: grad_norm=15.5024, loss=0.4118, param_norm=1938.5065
+Step 300: grad_norm=8.7663, loss=0.2808, param_norm=1938.5093
+Step 350: grad_norm=8.4897, loss=0.2377, param_norm=1938.5126
+Step 400: grad_norm=4.0069, loss=0.1478, param_norm=1938.5153
+Step 450: grad_norm=7.9136, loss=0.2897, param_norm=1938.5182
+Step 500: grad_norm=2.1766, loss=0.1049, param_norm=1938.5209
+Step 550: grad_norm=3.0939, loss=0.1209, param_norm=1938.5240
+Step 600: grad_norm=2.3085, loss=0.0985, param_norm=1938.5267
+Step 650: grad_norm=2.3725, loss=0.1101, param_norm=1938.5299
+Step 700: grad_norm=1.6607, loss=0.0651, param_norm=1938.5327
+Step 750: grad_norm=1.6614, loss=0.0701, param_norm=1938.5354
+Step 800: grad_norm=1.8930, loss=0.0864, param_norm=1938.5385
+Step 850: grad_norm=2.2337, loss=0.0896, param_norm=1938.5409
+Step 900: grad_norm=1.6844, loss=0.0653, param_norm=1938.5433
+Step 950: grad_norm=1.5586, loss=0.0582, param_norm=1938.5455
+Step 1000: grad_norm=1.5445, loss=0.0621, param_norm=1938.5481
+00:12:51.718 [I] [process=0] Saving checkpoint at step 1000                                       (1286038:checkpoint_manager.py:1408)
+00:12:51.719 [I] [process=0] Started async saving checkpoint to /home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005/1000. (1286038:async_checkpointer.py:439)
+00:12:51.721 [I] Using ThreadSafeKeyValueSignalingClient                                          (1286038:signaling_client.py:332)
+00:12:51.745 [I] Creating tmp directory /home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005/1000.orbax-checkpoint-tmp-0 (1286038:atomicity.py:144)
+00:12:51.748 [I] Wrote Metadata={'item_handlers': None, 'metrics': {}, 'performance_metrics': {}, 'init_timestamp_nsecs': 1790349171746691119, 'commit_timestamp_nsecs': None, 'custom_metadata': {}}, json={"item_handlers": null, "metrics": {}, "performance_metrics": {}, "init_timestamp_nsecs": 1790349171746691119, "commit_timestamp_nsecs": null, "custom_metadata": {}} to /home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005/1000.orbax-checkpoint-tmp-0/_CHECKPOINT_METADATA (1286038:checkpoint.py:186)
+00:12:51.750 [I] Creating tmp directory /home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005/1000.orbax-checkpoint-tmp-0/assets.orbax-checkpoint-tmp-1 (1286038:atomicity.py:144)
+00:12:51.751 [I] Creating tmp directory /home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005/1000.orbax-checkpoint-tmp-0/params.orbax-checkpoint-tmp-2 (1286038:atomicity.py:144)
+00:12:51.751 [I] Creating tmp directory /home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005/1000.orbax-checkpoint-tmp-0/train_state.orbax-checkpoint-tmp-3 (1286038:atomicity.py:144)
+00:12:51.778 [I] Transferring arrays to host memory with options: use_replica_parallel=True, enable_pinned_host_transfer=False (1286038:replica_slices.py:341)
+00:12:55.588 [I] Transferring arrays to host memory with options: use_replica_parallel=True, enable_pinned_host_transfer=False (1286038:replica_slices.py:341)
+00:12:55.594 [I] Array name: 'params.PaliGemma.llm.layers.mlp.gating_einsum.value', global shape: (18, 2, 2048, 16384), write shape: (18, 2, 2048, 16384), chosen chunk shape: (18, 2, 2048, 8192) (1286038:tensorstore_utils.py:408)
+00:12:55.653 [I] [process=0][thread=array_type_handler] Wrote 71 array_metadata.ArrayMetadata to /home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005/1000.orbax-checkpoint-tmp-0/params.orbax-checkpoint-tmp-2/array_metadatas/process_0 (1286038:array_metadata_store.py:198)
+00:12:58.203 [I] [process=0] /jax/checkpoint/write/blocking_bytes_per_sec: 1.1 GiB/s (total bytes: 7.2 GiB) (time elapsed: 6 seconds) (per-host) (1286038:base_pytree_checkpoint_handler.py:114)
+00:12:58.213 [I] [process=0] /jax/checkpoint/write/blocking_bytes_per_sec: 550.6 MiB/s (total bytes: 3.5 GiB) (time elapsed: 6 seconds) (per-host) (1286038:base_pytree_checkpoint_handler.py:114)
+00:12:58.219 [I] [process=0][thread=async_save] Background save thread started.                   (1286038:async_checkpointer.py:77)
+00:12:58.220 [I] Finished blocking save in 6.50 seconds. Continuing to save asynchronously to /home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005/1000. (1286038:async_checkpointer.py:548)
+00:12:58.222 [I] [process=0][thread=MainThread][step=1000] Starting CheckpointManager Save Finalize thread=save_finalize (1286038:checkpoint_manager.py:1453)
+00:12:58.229 [I] [process=0][thread=save_finalize] Waiting for background save thread=async_save. (1286038:async_checkpointer.py:258)
+00:12:58.230 [I] {'step': 1000, 'event_type': 'save', 'directory': '/home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005', 'reached_preemption': False, 'preemption_received_at': None, 'synchronous': False, 'wait_for_prev_start_time': 1790349171.716218, 'wait_for_prev_duration_secs': 0.0005033016204833984, 'checkpointer_blocking_start_time': 1790349171.718191, 'checkpointer_blocking_duration_secs': 6.504220008850098, 'get_old_steps_start_time': 1790349178.2225618, 'get_old_steps_duration_secs': 2.2649765014648438e-05, 'checkpoint_manager_blocking_start_time': 1790349171.715115, 'checkpoint_manager_blocking_duration_secs': 6.515438556671143} (1286038:standard_logger.py:34)
+ 10%|███████                                                                | 1001/10000 [08:18<6:12:55,  2.49s/it]00:12:58.329 [I] [process=0][thread=array_type_handler] Wrote 105 array_metadata.ArrayMetadata to /home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005/1000.orbax-checkpoint-tmp-0/train_state.orbax-checkpoint-tmp-3/array_metadatas/process_0 (1286038:array_metadata_store.py:198)
+ 10%|███████▍                                                               | 1043/10000 [08:37<1:10:53,  2.11it/s]00:13:18.239 [I] [process=0] /jax/checkpoint/write/bytes_per_sec: 278.4 MiB/s (total bytes: 7.2 GiB) (time elapsed: 26 seconds) (per-host) (1286038:base_pytree_checkpoint_handler.py:114)
+00:13:18.240 [I] [process=0] /jax/checkpoint/write/bytes_per_sec: 134.5 MiB/s (total bytes: 3.5 GiB) (time elapsed: 26 seconds) (per-host) (1286038:base_pytree_checkpoint_handler.py:114)
+00:13:18.241 [I] [process=0][thread=async_save] 5 Handler Commit operations completed.            (1286038:async_checkpointer.py:87)
+00:13:18.242 [I] Read Metadata={'item_handlers': None, 'metrics': {}, 'performance_metrics': {}, 'init_timestamp_nsecs': 1790349171746691119, 'commit_timestamp_nsecs': None, 'custom_metadata': {}} from /home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005/1000.orbax-checkpoint-tmp-0/_CHECKPOINT_METADATA (1286038:checkpoint.py:226)
+00:13:18.243 [I] Renaming /home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005/1000.orbax-checkpoint-tmp-0/assets.orbax-checkpoint-tmp-1 to /home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005/1000.orbax-checkpoint-tmp-0/assets (1286038:atomicity.py:289)
+00:13:18.245 [I] Updated Metadata={'item_handlers': {'assets': 'openpi.training.checkpoints.CallbackHandler', 'params': 'orbax.checkpoint._src.handlers.pytree_checkpoint_handler.PyTreeCheckpointHandler', 'train_state': 'orbax.checkpoint._src.handlers.pytree_checkpoint_handler.PyTreeCheckpointHandler'}, 'metrics': {}, 'performance_metrics': {}, 'init_timestamp_nsecs': 1790349171746691119, 'commit_timestamp_nsecs': None, 'custom_metadata': {}} to /home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005/1000.orbax-checkpoint-tmp-0/_CHECKPOINT_METADATA (1286038:checkpoint.py:245)
+00:13:18.250 [I] [process=0][thread=async_save] Skipped cross-host ArrayMetadata validation because only one process is found: process_index=0. (1286038:array_metadata_store.py:362)
+00:13:18.264 [I] Renaming /home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005/1000.orbax-checkpoint-tmp-0/train_state.orbax-checkpoint-tmp-3 to /home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005/1000.orbax-checkpoint-tmp-0/train_state (1286038:atomicity.py:289)
+00:13:18.267 [I] [process=0][thread=async_save] Skipped cross-host ArrayMetadata validation because only one process is found: process_index=0. (1286038:array_metadata_store.py:362)
+00:13:18.280 [I] Renaming /home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005/1000.orbax-checkpoint-tmp-0/params.orbax-checkpoint-tmp-2 to /home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005/1000.orbax-checkpoint-tmp-0/params (1286038:atomicity.py:289)
+00:13:18.280 [I] Renaming /home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005/1000.orbax-checkpoint-tmp-0 to /home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005/1000 (1286038:atomicity.py:289)
+00:13:18.282 [I] [process=0][thread=async_save] Finished saving checkpoint (finalized tmp dir) to `/home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005/1000`. (1286038:atomicity.py:573)
+00:13:18.282 [I] Finished asynchronous save (blocking + background) in 26.56 seconds to /home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005/1000 (1286038:async_checkpointer.py:412)
+00:13:18.282 [I] [process=0][thread=async_save] Background save thread done.                      (1286038:async_checkpointer.py:143)
+00:13:18.283 [I] [process=0][thread=save_finalize] Done with waiting for background save thread=async_save. (1286038:async_checkpointer.py:266)
+00:13:18.283 [I] [process=0][thread=save_finalize] No errors found in background save thread=async_save. (1286038:async_checkpointer.py:276)
+00:13:18.283 [I] [process=0][thread=save_finalize][step=1000] CheckpointManager Save Finalize is syncing with other hosts... (1286038:checkpoint_manager.py:2095)
+00:13:18.284 [I] [process=0][thread=save_finalize][step=1000] CheckpointManager Save Finalize is done on all hosts. (1286038:checkpoint_manager.py:2110)
+ 20%|██████████████▏                                                        | 2000/10000 [16:15<1:03:27,  2.10it/s]00:20:55.178 [I] [process=0][thread=MainThread][wait_until_finished] No Save Finalize thread to wait for. Returning. (1286038:checkpoint_manager.py:1987)
+Step 1050: grad_norm=1.4982, loss=0.0600, param_norm=1938.5505
+Step 1100: grad_norm=1.7299, loss=0.0745, param_norm=1938.5531
+Step 1150: grad_norm=1.3448, loss=0.0548, param_norm=1938.5560
+Step 1200: grad_norm=1.5824, loss=0.0582, param_norm=1938.5587
+Step 1250: grad_norm=1.3928, loss=0.0526, param_norm=1938.5615
+Step 1300: grad_norm=1.3109, loss=0.0521, param_norm=1938.5643
+Step 1350: grad_norm=1.2959, loss=0.0470, param_norm=1938.5671
+Step 1400: grad_norm=1.0679, loss=0.0367, param_norm=1938.5690
+Step 1450: grad_norm=1.3075, loss=0.0540, param_norm=1938.5715
+Step 1500: grad_norm=1.1011, loss=0.0408, param_norm=1938.5745
+Step 1550: grad_norm=1.2858, loss=0.0539, param_norm=1938.5776
+Step 1600: grad_norm=1.1487, loss=0.0425, param_norm=1938.5803
+Step 1650: grad_norm=0.9516, loss=0.0376, param_norm=1938.5826
+Step 1700: grad_norm=0.9953, loss=0.0355, param_norm=1938.5851
+Step 1750: grad_norm=0.9263, loss=0.0329, param_norm=1938.5874
+Step 1800: grad_norm=1.0141, loss=0.0339, param_norm=1938.5898
+Step 1850: grad_norm=0.9862, loss=0.0315, param_norm=1938.5924
+Step 1900: grad_norm=1.0986, loss=0.0450, param_norm=1938.5946
+Step 1950: grad_norm=1.0390, loss=0.0388, param_norm=1938.5974
+Step 2000: grad_norm=0.9005, loss=0.0303, param_norm=1938.6002
+00:20:55.180 [I] [process=0] Saving checkpoint at step 2000                                       (1286038:checkpoint_manager.py:1408)
+00:20:55.182 [I] [process=0] Started async saving checkpoint to /home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005/2000. (1286038:async_checkpointer.py:439)
+00:20:55.197 [I] Creating tmp directory /home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005/2000.orbax-checkpoint-tmp-4 (1286038:atomicity.py:144)
+00:20:55.211 [I] Creating tmp directory /home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005/2000.orbax-checkpoint-tmp-4/assets.orbax-checkpoint-tmp-5 (1286038:atomicity.py:144)
+00:20:55.212 [I] Creating tmp directory /home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005/2000.orbax-checkpoint-tmp-4/params.orbax-checkpoint-tmp-6 (1286038:atomicity.py:144)
+00:20:55.212 [I] Creating tmp directory /home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005/2000.orbax-checkpoint-tmp-4/train_state.orbax-checkpoint-tmp-7 (1286038:atomicity.py:144)
+00:20:55.238 [I] Transferring arrays to host memory with options: use_replica_parallel=True, enable_pinned_host_transfer=False (1286038:replica_slices.py:341)
+00:20:59.107 [I] Transferring arrays to host memory with options: use_replica_parallel=True, enable_pinned_host_transfer=False (1286038:replica_slices.py:341)
+00:20:59.112 [I] Array name: 'params.PaliGemma.llm.layers.mlp.gating_einsum.value', global shape: (18, 2, 2048, 16384), write shape: (18, 2, 2048, 16384), chosen chunk shape: (18, 2, 2048, 8192) (1286038:tensorstore_utils.py:408)
+00:20:59.192 [I] [process=0][thread=array_type_handler] Wrote 71 array_metadata.ArrayMetadata to /home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005/2000.orbax-checkpoint-tmp-4/params.orbax-checkpoint-tmp-6/array_metadatas/process_0 (1286038:array_metadata_store.py:198)
+00:21:01.145 [I] [process=0] /jax/checkpoint/write/blocking_bytes_per_sec: 1.2 GiB/s (total bytes: 7.2 GiB) (time elapsed: 5 seconds) (per-host) (1286038:base_pytree_checkpoint_handler.py:114)
+00:21:01.161 [I] [process=0] /jax/checkpoint/write/blocking_bytes_per_sec: 598.1 MiB/s (total bytes: 3.5 GiB) (time elapsed: 5 seconds) (per-host) (1286038:base_pytree_checkpoint_handler.py:114)
+00:21:01.167 [I] [process=0][thread=async_save] Background save thread started.                   (1286038:async_checkpointer.py:77)
+00:21:01.168 [I] Finished blocking save in 5.99 seconds. Continuing to save asynchronously to /home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005/2000. (1286038:async_checkpointer.py:548)
+00:21:01.169 [I] Deleting Checkpoint[step=1000 | time=2026-09-25 15:12:58.222518+00:00]: (Reason: old checkpoint). (1286038:checkpoint_manager.py:1963)
+00:21:01.170 [I] [process=0][thread=MainThread][step=2000] Starting CheckpointManager Save Finalize thread=save_finalize (1286038:checkpoint_manager.py:1453)
+00:21:01.171 [I] [process=0][thread=save_finalize] Waiting for background save thread=async_save. (1286038:async_checkpointer.py:258)
+00:21:01.172 [I] {'step': 2000, 'event_type': 'save', 'directory': '/home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005', 'reached_preemption': False, 'preemption_received_at': None, 'synchronous': False, 'wait_for_prev_start_time': 1790349655.178168, 'wait_for_prev_duration_secs': 0.0008449554443359375, 'checkpointer_blocking_start_time': 1790349655.1807053, 'checkpointer_blocking_duration_secs': 5.989060401916504, 'get_old_steps_start_time': 1790349661.1698232, 'get_old_steps_duration_secs': 0.0006899833679199219, 'checkpoint_manager_blocking_start_time': 1790349655.1771939, 'checkpoint_manager_blocking_duration_secs': 5.995000123977661} (1286038:standard_logger.py:34)
+ 20%|██████████████▏                                                        | 2001/10000 [16:21<5:11:19,  2.34s/it]00:21:01.297 [I] [process=0][thread=array_type_handler] Wrote 105 array_metadata.ArrayMetadata to /home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005/2000.orbax-checkpoint-tmp-4/train_state.orbax-checkpoint-tmp-7/array_metadatas/process_0 (1286038:array_metadata_store.py:198)
+ 20%|██████████████▍                                                        | 2038/10000 [16:38<1:02:51,  2.11it/s]00:21:18.999 [I] [process=0] /jax/checkpoint/write/bytes_per_sec: 310.0 MiB/s (total bytes: 7.2 GiB) (time elapsed: 23 seconds) (per-host) (1286038:base_pytree_checkpoint_handler.py:114)
+00:21:19.000 [I] [process=0] /jax/checkpoint/write/bytes_per_sec: 149.7 MiB/s (total bytes: 3.5 GiB) (time elapsed: 23 seconds) (per-host) (1286038:base_pytree_checkpoint_handler.py:114)
+00:21:19.000 [I] [process=0][thread=async_save] 5 Handler Commit operations completed.            (1286038:async_checkpointer.py:87)
+00:21:19.001 [I] Renaming /home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005/2000.orbax-checkpoint-tmp-4/assets.orbax-checkpoint-tmp-5 to /home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005/2000.orbax-checkpoint-tmp-4/assets (1286038:atomicity.py:289)
+00:21:19.006 [I] [process=0][thread=async_save] Skipped cross-host ArrayMetadata validation because only one process is found: process_index=0. (1286038:array_metadata_store.py:362)
+00:21:19.582 [I] Renaming /home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005/2000.orbax-checkpoint-tmp-4/train_state.orbax-checkpoint-tmp-7 to /home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005/2000.orbax-checkpoint-tmp-4/train_state (1286038:atomicity.py:289)
+00:21:19.586 [I] [process=0][thread=async_save] Skipped cross-host ArrayMetadata validation because only one process is found: process_index=0. (1286038:array_metadata_store.py:362)
+ 20%|██████████████▍                                                        | 2039/10000 [16:39<1:24:56,  1.56it/s]00:21:19.600 [I] Renaming /home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005/2000.orbax-checkpoint-tmp-4/params.orbax-checkpoint-tmp-6 to /home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005/2000.orbax-checkpoint-tmp-4/params (1286038:atomicity.py:289)
+00:21:19.600 [I] Renaming /home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005/2000.orbax-checkpoint-tmp-4 to /home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005/2000 (1286038:atomicity.py:289)
+00:21:19.601 [I] [process=0][thread=async_save] Finished saving checkpoint (finalized tmp dir) to `/home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005/2000`. (1286038:atomicity.py:573)
+00:21:19.601 [I] Finished asynchronous save (blocking + background) in 24.42 seconds to /home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005/2000 (1286038:async_checkpointer.py:412)
+00:21:19.602 [I] [process=0][thread=async_save] Background save thread done.                      (1286038:async_checkpointer.py:143)
+00:21:19.602 [I] [process=0][thread=save_finalize] Done with waiting for background save thread=async_save. (1286038:async_checkpointer.py:266)
+00:21:19.602 [I] [process=0][thread=save_finalize] No errors found in background save thread=async_save. (1286038:async_checkpointer.py:276)
+ 20%|██████████████▍                                                        | 2042/10000 [16:40<1:07:18,  1.97it/s]00:21:21.069 [I] Deleted step 1000.                                                               (1286038:deleter.py:114)
+00:21:21.070 [I] [process=0][thread=save_finalize][step=2000] CheckpointManager Save Finalize is syncing with other hosts... (1286038:checkpoint_manager.py:2095)
+00:21:21.070 [I] [process=0][thread=save_finalize][step=2000] CheckpointManager Save Finalize is done on all hosts. (1286038:checkpoint_manager.py:2110)
+ 30%|█████████████████████▉                                                   | 3000/10000 [24:18<55:34,  2.10it/s]00:28:58.279 [I] [process=0][thread=MainThread][wait_until_finished] No Save Finalize thread to wait for. Returning. (1286038:checkpoint_manager.py:1987)
+Step 2050: grad_norm=0.8959, loss=0.0330, param_norm=1938.6029
+Step 2100: grad_norm=0.8720, loss=0.0302, param_norm=1938.6056
+Step 2150: grad_norm=0.7861, loss=0.0238, param_norm=1938.6080
+Step 2200: grad_norm=1.3225, loss=0.0601, param_norm=1938.6108
+Step 2250: grad_norm=0.8254, loss=0.0272, param_norm=1938.6136
+Step 2300: grad_norm=0.8597, loss=0.0329, param_norm=1938.6162
+Step 2350: grad_norm=0.8877, loss=0.0303, param_norm=1938.6184
+Step 2400: grad_norm=0.8724, loss=0.0277, param_norm=1938.6206
+Step 2450: grad_norm=0.8261, loss=0.0266, param_norm=1938.6234
+Step 2500: grad_norm=0.8199, loss=0.0246, param_norm=1938.6259
+Step 2550: grad_norm=0.8492, loss=0.0271, param_norm=1938.6281
+Step 2600: grad_norm=0.9504, loss=0.0325, param_norm=1938.6302
+Step 2650: grad_norm=0.7836, loss=0.0247, param_norm=1938.6331
+Step 2700: grad_norm=0.9146, loss=0.0259, param_norm=1938.6356
+Step 2750: grad_norm=0.7933, loss=0.0253, param_norm=1938.6381
+Step 2800: grad_norm=0.9677, loss=0.0307, param_norm=1938.6403
+Step 2850: grad_norm=0.8659, loss=0.0276, param_norm=1938.6428
+Step 2900: grad_norm=0.7743, loss=0.0232, param_norm=1938.6445
+Step 2950: grad_norm=0.9424, loss=0.0314, param_norm=1938.6469
+Step 3000: grad_norm=0.7376, loss=0.0224, param_norm=1938.6493
+00:28:58.280 [I] [process=0] Saving checkpoint at step 3000                                       (1286038:checkpoint_manager.py:1408)
+00:28:58.281 [I] [process=0] Started async saving checkpoint to /home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005/3000. (1286038:async_checkpointer.py:439)
+00:28:58.296 [I] Creating tmp directory /home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005/3000.orbax-checkpoint-tmp-8 (1286038:atomicity.py:144)
+00:28:58.310 [I] Creating tmp directory /home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005/3000.orbax-checkpoint-tmp-8/assets.orbax-checkpoint-tmp-9 (1286038:atomicity.py:144)
+00:28:58.314 [I] Creating tmp directory /home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005/3000.orbax-checkpoint-tmp-8/params.orbax-checkpoint-tmp-10 (1286038:atomicity.py:144)
+00:28:58.314 [I] Creating tmp directory /home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005/3000.orbax-checkpoint-tmp-8/train_state.orbax-checkpoint-tmp-11 (1286038:atomicity.py:144)
+00:28:58.321 [I] Transferring arrays to host memory with options: use_replica_parallel=True, enable_pinned_host_transfer=False (1286038:replica_slices.py:341)
+00:29:02.110 [I] Transferring arrays to host memory with options: use_replica_parallel=True, enable_pinned_host_transfer=False (1286038:replica_slices.py:341)
+00:29:02.115 [I] Array name: 'params.PaliGemma.llm.layers.mlp.gating_einsum.value', global shape: (18, 2, 2048, 16384), write shape: (18, 2, 2048, 16384), chosen chunk shape: (18, 2, 2048, 8192) (1286038:tensorstore_utils.py:408)
+00:29:02.178 [I] [process=0][thread=array_type_handler] Wrote 71 array_metadata.ArrayMetadata to /home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005/3000.orbax-checkpoint-tmp-8/params.orbax-checkpoint-tmp-10/array_metadatas/process_0 (1286038:array_metadata_store.py:198)
+00:29:04.583 [I] [process=0] /jax/checkpoint/write/blocking_bytes_per_sec: 1.1 GiB/s (total bytes: 7.2 GiB) (time elapsed: 6 seconds) (per-host) (1286038:base_pytree_checkpoint_handler.py:114)
+00:29:04.586 [I] [process=0] /jax/checkpoint/write/blocking_bytes_per_sec: 566.3 MiB/s (total bytes: 3.5 GiB) (time elapsed: 6 seconds) (per-host) (1286038:base_pytree_checkpoint_handler.py:114)
+00:29:04.607 [I] [process=0][thread=async_save] Background save thread started.                   (1286038:async_checkpointer.py:77)
+00:29:04.608 [I] Finished blocking save in 6.33 seconds. Continuing to save asynchronously to /home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005/3000. (1286038:async_checkpointer.py:548)
+00:29:04.611 [I] Deleting Checkpoint[step=2000 | time=2026-09-25 15:21:01.169803+00:00]: (Reason: old checkpoint). (1286038:checkpoint_manager.py:1963)
+00:29:04.612 [I] [process=0][thread=MainThread][step=3000] Starting CheckpointManager Save Finalize thread=save_finalize (1286038:checkpoint_manager.py:1453)
+00:29:04.615 [I] [process=0][thread=save_finalize] Waiting for background save thread=async_save. (1286038:async_checkpointer.py:258)
+00:29:04.616 [I] {'step': 3000, 'event_type': 'save', 'directory': '/home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005', 'reached_preemption': False, 'preemption_received_at': None, 'synchronous': False, 'wait_for_prev_start_time': 1790350138.2794244, 'wait_for_prev_duration_secs': 0.0003571510314941406, 'checkpointer_blocking_start_time': 1790350138.280583, 'checkpointer_blocking_duration_secs': 6.330830812454224, 'get_old_steps_start_time': 1790350144.611508, 'get_old_steps_duration_secs': 0.0012631416320800781, 'checkpoint_manager_blocking_start_time': 1790350138.2789423, 'checkpoint_manager_blocking_duration_secs': 6.337342739105225} (1286038:standard_logger.py:34)
+ 30%|█████████████████████▎                                                 | 3001/10000 [24:24<4:43:49,  2.43s/it]00:29:04.729 [I] [process=0][thread=array_type_handler] Wrote 105 array_metadata.ArrayMetadata to /home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005/3000.orbax-checkpoint-tmp-8/train_state.orbax-checkpoint-tmp-11/array_metadatas/process_0 (1286038:array_metadata_store.py:198)
+ 30%|██████████████████████▏                                                  | 3039/10000 [24:42<55:04,  2.11it/s]00:29:22.766 [I] [process=0] /jax/checkpoint/write/bytes_per_sec: 301.5 MiB/s (total bytes: 7.2 GiB) (time elapsed: 24 seconds) (per-host) (1286038:base_pytree_checkpoint_handler.py:114)
+00:29:22.766 [I] [process=0] /jax/checkpoint/write/bytes_per_sec: 145.6 MiB/s (total bytes: 3.5 GiB) (time elapsed: 24 seconds) (per-host) (1286038:base_pytree_checkpoint_handler.py:114)
+00:29:22.766 [I] [process=0][thread=async_save] 5 Handler Commit operations completed.            (1286038:async_checkpointer.py:87)
+00:29:22.767 [I] Renaming /home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005/3000.orbax-checkpoint-tmp-8/assets.orbax-checkpoint-tmp-9 to /home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005/3000.orbax-checkpoint-tmp-8/assets (1286038:atomicity.py:289)
+00:29:22.771 [I] [process=0][thread=async_save] Skipped cross-host ArrayMetadata validation because only one process is found: process_index=0. (1286038:array_metadata_store.py:362)
+00:29:22.784 [I] Renaming /home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005/3000.orbax-checkpoint-tmp-8/train_state.orbax-checkpoint-tmp-11 to /home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005/3000.orbax-checkpoint-tmp-8/train_state (1286038:atomicity.py:289)
+00:29:22.787 [I] [process=0][thread=async_save] Skipped cross-host ArrayMetadata validation because only one process is found: process_index=0. (1286038:array_metadata_store.py:362)
+00:29:22.800 [I] Renaming /home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005/3000.orbax-checkpoint-tmp-8/params.orbax-checkpoint-tmp-10 to /home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005/3000.orbax-checkpoint-tmp-8/params (1286038:atomicity.py:289)
+00:29:22.800 [I] Renaming /home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005/3000.orbax-checkpoint-tmp-8 to /home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005/3000 (1286038:atomicity.py:289)
+00:29:22.802 [I] [process=0][thread=async_save] Finished saving checkpoint (finalized tmp dir) to `/home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005/3000`. (1286038:atomicity.py:573)
+00:29:22.802 [I] Finished asynchronous save (blocking + background) in 24.52 seconds to /home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005/3000 (1286038:async_checkpointer.py:412)
+00:29:22.803 [I] [process=0][thread=async_save] Background save thread done.                      (1286038:async_checkpointer.py:143)
+00:29:22.803 [I] [process=0][thread=save_finalize] Done with waiting for background save thread=async_save. (1286038:async_checkpointer.py:266)
+00:29:22.803 [I] [process=0][thread=save_finalize] No errors found in background save thread=async_save. (1286038:async_checkpointer.py:276)
+ 30%|██████████████████████▏                                                  | 3042/10000 [24:43<55:00,  2.11it/s]00:29:24.138 [I] Deleted step 2000.                                                               (1286038:deleter.py:114)
+00:29:24.139 [I] [process=0][thread=save_finalize][step=3000] CheckpointManager Save Finalize is syncing with other hosts... (1286038:checkpoint_manager.py:2095)
+00:29:24.139 [I] [process=0][thread=save_finalize][step=3000] CheckpointManager Save Finalize is done on all hosts. (1286038:checkpoint_manager.py:2110)
+ 40%|█████████████████████████████▏                                           | 4000/10000 [32:21<47:44,  2.09it/s]00:37:01.613 [I] [process=0][thread=MainThread][wait_until_finished] No Save Finalize thread to wait for. Returning. (1286038:checkpoint_manager.py:1987)
+Step 3050: grad_norm=0.6370, loss=0.0190, param_norm=1938.6519
+Step 3100: grad_norm=0.7589, loss=0.0226, param_norm=1938.6543
+Step 3150: grad_norm=0.6825, loss=0.0211, param_norm=1938.6565
+Step 3200: grad_norm=0.6880, loss=0.0234, param_norm=1938.6591
+Step 3250: grad_norm=0.7261, loss=0.0220, param_norm=1938.6613
+Step 3300: grad_norm=0.8339, loss=0.0233, param_norm=1938.6637
+Step 3350: grad_norm=0.7267, loss=0.0263, param_norm=1938.6663
+Step 3400: grad_norm=0.7286, loss=0.0216, param_norm=1938.6681
+Step 3450: grad_norm=0.7066, loss=0.0219, param_norm=1938.6703
+Step 3500: grad_norm=0.6811, loss=0.0214, param_norm=1938.6721
+Step 3550: grad_norm=0.8588, loss=0.0249, param_norm=1938.6743
+Step 3600: grad_norm=0.7360, loss=0.0236, param_norm=1938.6758
+Step 3650: grad_norm=0.6545, loss=0.0190, param_norm=1938.6781
+Step 3700: grad_norm=0.7887, loss=0.0248, param_norm=1938.6803
+Step 3750: grad_norm=0.8407, loss=0.0260, param_norm=1938.6820
+Step 3800: grad_norm=0.6551, loss=0.0169, param_norm=1938.6844
+Step 3850: grad_norm=0.6452, loss=0.0173, param_norm=1938.6871
+Step 3900: grad_norm=0.5868, loss=0.0161, param_norm=1938.6897
+Step 3950: grad_norm=0.6499, loss=0.0189, param_norm=1938.6917
+Step 4000: grad_norm=0.5591, loss=0.0156, param_norm=1938.6937
+00:37:01.614 [I] [process=0] Saving checkpoint at step 4000                                       (1286038:checkpoint_manager.py:1408)
+00:37:01.615 [I] [process=0] Started async saving checkpoint to /home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005/4000. (1286038:async_checkpointer.py:439)
+00:37:01.630 [I] Creating tmp directory /home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005/4000.orbax-checkpoint-tmp-12 (1286038:atomicity.py:144)
+00:37:01.642 [I] Creating tmp directory /home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005/4000.orbax-checkpoint-tmp-12/assets.orbax-checkpoint-tmp-13 (1286038:atomicity.py:144)
+00:37:01.643 [I] Creating tmp directory /home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005/4000.orbax-checkpoint-tmp-12/params.orbax-checkpoint-tmp-14 (1286038:atomicity.py:144)
+00:37:01.648 [I] Creating tmp directory /home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005/4000.orbax-checkpoint-tmp-12/train_state.orbax-checkpoint-tmp-15 (1286038:atomicity.py:144)
+00:37:01.654 [I] Transferring arrays to host memory with options: use_replica_parallel=True, enable_pinned_host_transfer=False (1286038:replica_slices.py:341)
+00:37:05.509 [I] Transferring arrays to host memory with options: use_replica_parallel=True, enable_pinned_host_transfer=False (1286038:replica_slices.py:341)
+00:37:05.514 [I] Array name: 'params.PaliGemma.llm.layers.mlp.gating_einsum.value', global shape: (18, 2, 2048, 16384), write shape: (18, 2, 2048, 16384), chosen chunk shape: (18, 2, 2048, 8192) (1286038:tensorstore_utils.py:408)
+00:37:05.593 [I] [process=0][thread=array_type_handler] Wrote 71 array_metadata.ArrayMetadata to /home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005/4000.orbax-checkpoint-tmp-12/params.orbax-checkpoint-tmp-14/array_metadatas/process_0 (1286038:array_metadata_store.py:198)
+00:37:07.628 [I] [process=0] /jax/checkpoint/write/blocking_bytes_per_sec: 1.2 GiB/s (total bytes: 7.2 GiB) (time elapsed: 6 seconds) (per-host) (1286038:base_pytree_checkpoint_handler.py:114)
+00:37:07.639 [I] [process=0] /jax/checkpoint/write/blocking_bytes_per_sec: 592.7 MiB/s (total bytes: 3.5 GiB) (time elapsed: 6 seconds) (per-host) (1286038:base_pytree_checkpoint_handler.py:114)
+00:37:07.644 [I] [process=0][thread=async_save] Background save thread started.                   (1286038:async_checkpointer.py:77)
+00:37:07.645 [I] Finished blocking save in 6.03 seconds. Continuing to save asynchronously to /home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005/4000. (1286038:async_checkpointer.py:548)
+00:37:07.646 [I] Deleting Checkpoint[step=3000 | time=2026-09-25 15:29:04.611477+00:00]: (Reason: old checkpoint). (1286038:checkpoint_manager.py:1963)
+00:37:07.647 [I] [process=0][thread=MainThread][step=4000] Starting CheckpointManager Save Finalize thread=save_finalize (1286038:checkpoint_manager.py:1453)
+00:37:07.649 [I] [process=0][thread=save_finalize] Waiting for background save thread=async_save. (1286038:async_checkpointer.py:258)
+00:37:07.649 [I] {'step': 4000, 'event_type': 'save', 'directory': '/home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005', 'reached_preemption': False, 'preemption_received_at': None, 'synchronous': False, 'wait_for_prev_start_time': 1790350621.6130161, 'wait_for_prev_duration_secs': 0.0004239082336425781, 'checkpointer_blocking_start_time': 1790350621.6142182, 'checkpointer_blocking_duration_secs': 6.032585620880127, 'get_old_steps_start_time': 1790350627.6468716, 'get_old_steps_duration_secs': 0.0008034706115722656, 'checkpoint_manager_blocking_start_time': 1790350621.612541, 'checkpoint_manager_blocking_duration_secs': 6.03723669052124} (1286038:standard_logger.py:34)
+ 40%|████████████████████████████▍                                          | 4001/10000 [32:27<3:54:22,  2.34s/it]00:37:07.741 [I] [process=0][thread=array_type_handler] Wrote 105 array_metadata.ArrayMetadata to /home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005/4000.orbax-checkpoint-tmp-12/train_state.orbax-checkpoint-tmp-15/array_metadatas/process_0 (1286038:array_metadata_store.py:198)
+ 40%|█████████████████████████████▌                                           | 4044/10000 [32:47<47:13,  2.10it/s]00:37:28.043 [I] [process=0] /jax/checkpoint/write/bytes_per_sec: 279.4 MiB/s (total bytes: 7.2 GiB) (time elapsed: 26 seconds) (per-host) (1286038:base_pytree_checkpoint_handler.py:114)
+00:37:28.044 [I] [process=0] /jax/checkpoint/write/bytes_per_sec: 134.9 MiB/s (total bytes: 3.5 GiB) (time elapsed: 26 seconds) (per-host) (1286038:base_pytree_checkpoint_handler.py:114)
+00:37:28.044 [I] [process=0][thread=async_save] 5 Handler Commit operations completed.            (1286038:async_checkpointer.py:87)
+00:37:28.045 [I] Renaming /home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005/4000.orbax-checkpoint-tmp-12/assets.orbax-checkpoint-tmp-13 to /home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005/4000.orbax-checkpoint-tmp-12/assets (1286038:atomicity.py:289)
+00:37:28.049 [I] [process=0][thread=async_save] Skipped cross-host ArrayMetadata validation because only one process is found: process_index=0. (1286038:array_metadata_store.py:362)
+00:37:28.062 [I] Renaming /home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005/4000.orbax-checkpoint-tmp-12/train_state.orbax-checkpoint-tmp-15 to /home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005/4000.orbax-checkpoint-tmp-12/train_state (1286038:atomicity.py:289)
+00:37:28.065 [I] [process=0][thread=async_save] Skipped cross-host ArrayMetadata validation because only one process is found: process_index=0. (1286038:array_metadata_store.py:362)
+00:37:28.084 [I] Renaming /home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005/4000.orbax-checkpoint-tmp-12/params.orbax-checkpoint-tmp-14 to /home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005/4000.orbax-checkpoint-tmp-12/params (1286038:atomicity.py:289)
+00:37:28.084 [I] Renaming /home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005/4000.orbax-checkpoint-tmp-12 to /home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005/4000 (1286038:atomicity.py:289)
+00:37:28.085 [I] [process=0][thread=async_save] Finished saving checkpoint (finalized tmp dir) to `/home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005/4000`. (1286038:atomicity.py:573)
+00:37:28.085 [I] Finished asynchronous save (blocking + background) in 26.47 seconds to /home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005/4000 (1286038:async_checkpointer.py:412)
+00:37:28.086 [I] [process=0][thread=async_save] Background save thread done.                      (1286038:async_checkpointer.py:143)
+00:37:28.086 [I] [process=0][thread=save_finalize] Done with waiting for background save thread=async_save. (1286038:async_checkpointer.py:266)
+00:37:28.086 [I] [process=0][thread=save_finalize] No errors found in background save thread=async_save. (1286038:async_checkpointer.py:276)
+ 40%|█████████████████████████████▌                                           | 4047/10000 [32:49<47:07,  2.11it/s]00:37:29.658 [I] Deleted step 3000.                                                               (1286038:deleter.py:114)
+00:37:29.659 [I] [process=0][thread=save_finalize][step=4000] CheckpointManager Save Finalize is syncing with other hosts... (1286038:checkpoint_manager.py:2095)
+00:37:29.659 [I] [process=0][thread=save_finalize][step=4000] CheckpointManager Save Finalize is done on all hosts. (1286038:checkpoint_manager.py:2110)
+ 50%|████████████████████████████████████▌                                    | 5000/10000 [40:24<39:39,  2.10it/s]00:45:04.701 [I] [process=0][thread=MainThread][wait_until_finished] No Save Finalize thread to wait for. Returning. (1286038:checkpoint_manager.py:1987)
+Step 4050: grad_norm=0.6613, loss=0.0187, param_norm=1938.6962
+Step 4100: grad_norm=0.5898, loss=0.0134, param_norm=1938.6982
+Step 4150: grad_norm=0.7169, loss=0.0243, param_norm=1938.7003
+Step 4200: grad_norm=0.5834, loss=0.0148, param_norm=1938.7025
+Step 4250: grad_norm=0.7136, loss=0.0195, param_norm=1938.7046
+Step 4300: grad_norm=0.6746, loss=0.0199, param_norm=1938.7070
+Step 4350: grad_norm=0.5683, loss=0.0148, param_norm=1938.7100
+Step 4400: grad_norm=0.6491, loss=0.0188, param_norm=1938.7122
+Step 4450: grad_norm=0.6469, loss=0.0193, param_norm=1938.7140
+Step 4500: grad_norm=0.7481, loss=0.0248, param_norm=1938.7156
+Step 4550: grad_norm=0.7249, loss=0.0217, param_norm=1938.7181
+Step 4600: grad_norm=0.7774, loss=0.0231, param_norm=1938.7200
+Step 4650: grad_norm=0.7050, loss=0.0229, param_norm=1938.7223
+Step 4700: grad_norm=0.6970, loss=0.0188, param_norm=1938.7250
+Step 4750: grad_norm=0.5729, loss=0.0149, param_norm=1938.7268
+Step 4800: grad_norm=0.5524, loss=0.0184, param_norm=1938.7294
+Step 4850: grad_norm=0.6902, loss=0.0242, param_norm=1938.7317
+Step 4900: grad_norm=0.6596, loss=0.0200, param_norm=1938.7334
+Step 4950: grad_norm=0.6515, loss=0.0199, param_norm=1938.7346
+Step 5000: grad_norm=0.7903, loss=0.0281, param_norm=1938.7368
+00:45:04.702 [I] [process=0] Saving checkpoint at step 5000                                       (1286038:checkpoint_manager.py:1408)
+00:45:04.703 [I] [process=0] Started async saving checkpoint to /home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005/5000. (1286038:async_checkpointer.py:439)
+00:45:04.717 [I] Creating tmp directory /home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005/5000.orbax-checkpoint-tmp-16 (1286038:atomicity.py:144)
+00:45:04.725 [I] Creating tmp directory /home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005/5000.orbax-checkpoint-tmp-16/assets.orbax-checkpoint-tmp-17 (1286038:atomicity.py:144)
+00:45:04.726 [I] Creating tmp directory /home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005/5000.orbax-checkpoint-tmp-16/params.orbax-checkpoint-tmp-18 (1286038:atomicity.py:144)
+00:45:04.730 [I] Creating tmp directory /home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005/5000.orbax-checkpoint-tmp-16/train_state.orbax-checkpoint-tmp-19 (1286038:atomicity.py:144)
+00:45:04.746 [I] Transferring arrays to host memory with options: use_replica_parallel=True, enable_pinned_host_transfer=False (1286038:replica_slices.py:341)
+00:45:08.552 [I] Transferring arrays to host memory with options: use_replica_parallel=True, enable_pinned_host_transfer=False (1286038:replica_slices.py:341)
+00:45:08.556 [I] Array name: 'params.PaliGemma.llm.layers.mlp.gating_einsum.value', global shape: (18, 2, 2048, 16384), write shape: (18, 2, 2048, 16384), chosen chunk shape: (18, 2, 2048, 8192) (1286038:tensorstore_utils.py:408)
+00:45:08.631 [I] [process=0][thread=array_type_handler] Wrote 71 array_metadata.ArrayMetadata to /home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005/5000.orbax-checkpoint-tmp-16/params.orbax-checkpoint-tmp-18/array_metadatas/process_0 (1286038:array_metadata_store.py:198)
+00:45:10.578 [I] [process=0] /jax/checkpoint/write/blocking_bytes_per_sec: 1.2 GiB/s (total bytes: 7.2 GiB) (time elapsed: 5 seconds) (per-host) (1286038:base_pytree_checkpoint_handler.py:114)
+00:45:10.585 [I] [process=0] /jax/checkpoint/write/blocking_bytes_per_sec: 607.0 MiB/s (total bytes: 3.5 GiB) (time elapsed: 5 seconds) (per-host) (1286038:base_pytree_checkpoint_handler.py:114)
+00:45:10.595 [I] [process=0][thread=async_save] Background save thread started.                   (1286038:async_checkpointer.py:77)
+00:45:10.596 [I] Finished blocking save in 5.89 seconds. Continuing to save asynchronously to /home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005/5000. (1286038:async_checkpointer.py:548)
+00:45:10.597 [I] Deleting Checkpoint[step=4000 | time=2026-09-25 15:37:07.646839+00:00]: (Reason: old checkpoint). (1286038:checkpoint_manager.py:1963)
+00:45:10.598 [I] [process=0][thread=MainThread][step=5000] Starting CheckpointManager Save Finalize thread=save_finalize (1286038:checkpoint_manager.py:1453)
+00:45:10.600 [I] [process=0][thread=save_finalize] Waiting for background save thread=async_save. (1286038:async_checkpointer.py:258)
+00:45:10.602 [I] {'step': 5000, 'event_type': 'save', 'directory': '/home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005', 'reached_preemption': False, 'preemption_received_at': None, 'synchronous': False, 'wait_for_prev_start_time': 1790351104.701302, 'wait_for_prev_duration_secs': 0.0003409385681152344, 'checkpointer_blocking_start_time': 1790351104.702392, 'checkpointer_blocking_duration_secs': 5.895372152328491, 'get_old_steps_start_time': 1790351110.5978048, 'get_old_steps_duration_secs': 0.000926971435546875, 'checkpoint_manager_blocking_start_time': 1790351104.7008448, 'checkpoint_manager_blocking_duration_secs': 5.901239395141602} (1286038:standard_logger.py:34)
+ 50%|███████████████████████████████████▌                                   | 5001/10000 [40:30<3:11:47,  2.30s/it]00:45:10.650 [I] [process=0][thread=array_type_handler] Wrote 105 array_metadata.ArrayMetadata to /home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005/5000.orbax-checkpoint-tmp-16/train_state.orbax-checkpoint-tmp-19/array_metadatas/process_0 (1286038:array_metadata_store.py:198)
+ 50%|████████████████████████████████████▊                                    | 5041/10000 [40:49<39:13,  2.11it/s]00:45:29.855 [I] [process=0] /jax/checkpoint/write/bytes_per_sec: 293.5 MiB/s (total bytes: 7.2 GiB) (time elapsed: 25 seconds) (per-host) (1286038:base_pytree_checkpoint_handler.py:114)
+00:45:29.855 [I] [process=0] /jax/checkpoint/write/bytes_per_sec: 141.7 MiB/s (total bytes: 3.5 GiB) (time elapsed: 25 seconds) (per-host) (1286038:base_pytree_checkpoint_handler.py:114)
+00:45:29.855 [I] [process=0][thread=async_save] 5 Handler Commit operations completed.            (1286038:async_checkpointer.py:87)
+00:45:29.856 [I] Renaming /home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005/5000.orbax-checkpoint-tmp-16/assets.orbax-checkpoint-tmp-17 to /home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005/5000.orbax-checkpoint-tmp-16/assets (1286038:atomicity.py:289)
+00:45:29.860 [I] [process=0][thread=async_save] Skipped cross-host ArrayMetadata validation because only one process is found: process_index=0. (1286038:array_metadata_store.py:362)
+00:45:29.872 [I] Renaming /home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005/5000.orbax-checkpoint-tmp-16/train_state.orbax-checkpoint-tmp-19 to /home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005/5000.orbax-checkpoint-tmp-16/train_state (1286038:atomicity.py:289)
+00:45:29.875 [I] [process=0][thread=async_save] Skipped cross-host ArrayMetadata validation because only one process is found: process_index=0. (1286038:array_metadata_store.py:362)
+00:45:29.888 [I] Renaming /home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005/5000.orbax-checkpoint-tmp-16/params.orbax-checkpoint-tmp-18 to /home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005/5000.orbax-checkpoint-tmp-16/params (1286038:atomicity.py:289)
+00:45:29.889 [I] Renaming /home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005/5000.orbax-checkpoint-tmp-16 to /home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005/5000 (1286038:atomicity.py:289)
+ 50%|████████████████████████████████████▊                                    | 5042/10000 [40:49<39:19,  2.10it/s]00:45:29.895 [I] [process=0][thread=async_save] Finished saving checkpoint (finalized tmp dir) to `/home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005/5000`. (1286038:atomicity.py:573)
+00:45:29.895 [I] Finished asynchronous save (blocking + background) in 25.19 seconds to /home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005/5000 (1286038:async_checkpointer.py:412)
+00:45:29.895 [I] [process=0][thread=async_save] Background save thread done.                      (1286038:async_checkpointer.py:143)
+00:45:29.896 [I] [process=0][thread=save_finalize] Done with waiting for background save thread=async_save. (1286038:async_checkpointer.py:266)
+00:45:29.896 [I] [process=0][thread=save_finalize] No errors found in background save thread=async_save. (1286038:async_checkpointer.py:276)
+ 50%|████████████████████████████████████▊                                    | 5045/10000 [40:51<39:12,  2.11it/s]00:45:31.357 [I] Deleted step 4000.                                                               (1286038:deleter.py:114)
+00:45:31.358 [I] [process=0][thread=save_finalize][step=5000] CheckpointManager Save Finalize is syncing with other hosts... (1286038:checkpoint_manager.py:2095)
+00:45:31.358 [I] [process=0][thread=save_finalize][step=5000] CheckpointManager Save Finalize is done on all hosts. (1286038:checkpoint_manager.py:2110)
+ 60%|███████████████████████████████████████████▊                             | 6000/10000 [48:27<31:46,  2.10it/s]00:53:07.435 [I] [process=0][thread=MainThread][wait_until_finished] No Save Finalize thread to wait for. Returning. (1286038:checkpoint_manager.py:1987)
+Step 5050: grad_norm=0.6745, loss=0.0204, param_norm=1938.7396
+Step 5100: grad_norm=0.5849, loss=0.0176, param_norm=1938.7422
+Step 5150: grad_norm=0.5207, loss=0.0143, param_norm=1938.7446
+Step 5200: grad_norm=0.8303, loss=0.0241, param_norm=1938.7472
+Step 5250: grad_norm=0.5607, loss=0.0155, param_norm=1938.7487
+Step 5300: grad_norm=0.5579, loss=0.0156, param_norm=1938.7502
+Step 5350: grad_norm=0.6239, loss=0.0203, param_norm=1938.7522
+Step 5400: grad_norm=0.5440, loss=0.0137, param_norm=1938.7542
+Step 5450: grad_norm=0.6006, loss=0.0185, param_norm=1938.7565
+Step 5500: grad_norm=0.5507, loss=0.0159, param_norm=1938.7581
+Step 5550: grad_norm=0.5117, loss=0.0125, param_norm=1938.7600
+Step 5600: grad_norm=0.5292, loss=0.0138, param_norm=1938.7620
+Step 5650: grad_norm=0.5092, loss=0.0130, param_norm=1938.7640
+Step 5700: grad_norm=0.5622, loss=0.0166, param_norm=1938.7659
+Step 5750: grad_norm=0.6022, loss=0.0168, param_norm=1938.7675
+Step 5800: grad_norm=0.6033, loss=0.0221, param_norm=1938.7689
+Step 5850: grad_norm=0.5391, loss=0.0120, param_norm=1938.7709
+Step 5900: grad_norm=0.5421, loss=0.0135, param_norm=1938.7728
+Step 5950: grad_norm=0.5050, loss=0.0132, param_norm=1938.7747
+Step 6000: grad_norm=0.5490, loss=0.0150, param_norm=1938.7767
+00:53:07.436 [I] [process=0] Saving checkpoint at step 6000                                       (1286038:checkpoint_manager.py:1408)
+00:53:07.436 [I] [process=0] Started async saving checkpoint to /home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005/6000. (1286038:async_checkpointer.py:439)
+00:53:07.449 [I] Creating tmp directory /home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005/6000.orbax-checkpoint-tmp-20 (1286038:atomicity.py:144)
+00:53:07.460 [I] Creating tmp directory /home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005/6000.orbax-checkpoint-tmp-20/assets.orbax-checkpoint-tmp-21 (1286038:atomicity.py:144)
+00:53:07.460 [I] Creating tmp directory /home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005/6000.orbax-checkpoint-tmp-20/train_state.orbax-checkpoint-tmp-23 (1286038:atomicity.py:144)
+00:53:07.461 [I] Creating tmp directory /home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005/6000.orbax-checkpoint-tmp-20/params.orbax-checkpoint-tmp-22 (1286038:atomicity.py:144)
+00:53:07.470 [I] Transferring arrays to host memory with options: use_replica_parallel=True, enable_pinned_host_transfer=False (1286038:replica_slices.py:341)
+00:53:11.291 [I] Transferring arrays to host memory with options: use_replica_parallel=True, enable_pinned_host_transfer=False (1286038:replica_slices.py:341)
+00:53:11.295 [I] Array name: 'params.PaliGemma.llm.layers.mlp.gating_einsum.value', global shape: (18, 2, 2048, 16384), write shape: (18, 2, 2048, 16384), chosen chunk shape: (18, 2, 2048, 8192) (1286038:tensorstore_utils.py:408)
+00:53:11.349 [I] [process=0][thread=array_type_handler] Wrote 71 array_metadata.ArrayMetadata to /home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005/6000.orbax-checkpoint-tmp-20/params.orbax-checkpoint-tmp-22/array_metadatas/process_0 (1286038:array_metadata_store.py:198)
+00:53:13.239 [I] [process=0] /jax/checkpoint/write/blocking_bytes_per_sec: 1.2 GiB/s (total bytes: 7.2 GiB) (time elapsed: 5 seconds) (per-host) (1286038:base_pytree_checkpoint_handler.py:114)
+00:53:13.251 [I] [process=0] /jax/checkpoint/write/blocking_bytes_per_sec: 613.8 MiB/s (total bytes: 3.5 GiB) (time elapsed: 5 seconds) (per-host) (1286038:base_pytree_checkpoint_handler.py:114)
+00:53:13.257 [I] [process=0][thread=async_save] Background save thread started.                   (1286038:async_checkpointer.py:77)
+00:53:13.258 [I] Finished blocking save in 5.82 seconds. Continuing to save asynchronously to /home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005/6000. (1286038:async_checkpointer.py:548)
+00:53:13.260 [I] Preserving Checkpoint[step=5000 | time=2026-09-25 15:45:10.597786+00:00]: (Reason: on keep_period=5000). (1286038:checkpoint_manager.py:1949)
+00:53:13.261 [I] [process=0][thread=MainThread][step=6000] Starting CheckpointManager Save Finalize thread=save_finalize (1286038:checkpoint_manager.py:1453)
+00:53:13.262 [I] [process=0][thread=save_finalize] Waiting for background save thread=async_save. (1286038:async_checkpointer.py:258)
+00:53:13.262 [I] {'step': 6000, 'event_type': 'save', 'directory': '/home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005', 'reached_preemption': False, 'preemption_received_at': None, 'synchronous': False, 'wait_for_prev_start_time': 1790351587.4352143, 'wait_for_prev_duration_secs': 0.0003027915954589844, 'checkpointer_blocking_start_time': 1790351587.436157, 'checkpointer_blocking_duration_secs': 5.8240885734558105, 'get_old_steps_start_time': 1790351593.2603018, 'get_old_steps_duration_secs': 0.0007581710815429688, 'checkpoint_manager_blocking_start_time': 1790351587.434809, 'checkpoint_manager_blocking_duration_secs': 5.827752351760864} (1286038:standard_logger.py:34)
+ 60%|██████████████████████████████████████████▌                            | 6001/10000 [48:33<2:31:56,  2.28s/it]00:53:13.306 [I] [process=0][thread=array_type_handler] Wrote 105 array_metadata.ArrayMetadata to /home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005/6000.orbax-checkpoint-tmp-20/train_state.orbax-checkpoint-tmp-23/array_metadatas/process_0 (1286038:array_metadata_store.py:198)
+ 60%|████████████████████████████████████████████                             | 6043/10000 [48:52<31:21,  2.10it/s]00:53:33.218 [I] [process=0] /jax/checkpoint/write/bytes_per_sec: 286.4 MiB/s (total bytes: 7.2 GiB) (time elapsed: 25 seconds) (per-host) (1286038:base_pytree_checkpoint_handler.py:114)
+00:53:33.219 [I] [process=0] /jax/checkpoint/write/bytes_per_sec: 138.2 MiB/s (total bytes: 3.5 GiB) (time elapsed: 25 seconds) (per-host) (1286038:base_pytree_checkpoint_handler.py:114)
+00:53:33.219 [I] [process=0][thread=async_save] 5 Handler Commit operations completed.            (1286038:async_checkpointer.py:87)
+00:53:33.220 [I] Renaming /home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005/6000.orbax-checkpoint-tmp-20/assets.orbax-checkpoint-tmp-21 to /home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005/6000.orbax-checkpoint-tmp-20/assets (1286038:atomicity.py:289)
+00:53:33.223 [I] [process=0][thread=async_save] Skipped cross-host ArrayMetadata validation because only one process is found: process_index=0. (1286038:array_metadata_store.py:362)
+00:53:33.237 [I] Renaming /home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005/6000.orbax-checkpoint-tmp-20/train_state.orbax-checkpoint-tmp-23 to /home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005/6000.orbax-checkpoint-tmp-20/train_state (1286038:atomicity.py:289)
+00:53:33.239 [I] [process=0][thread=async_save] Skipped cross-host ArrayMetadata validation because only one process is found: process_index=0. (1286038:array_metadata_store.py:362)
+00:53:33.251 [I] Renaming /home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005/6000.orbax-checkpoint-tmp-20/params.orbax-checkpoint-tmp-22 to /home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005/6000.orbax-checkpoint-tmp-20/params (1286038:atomicity.py:289)
+00:53:33.252 [I] Renaming /home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005/6000.orbax-checkpoint-tmp-20 to /home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005/6000 (1286038:atomicity.py:289)
+00:53:33.253 [I] [process=0][thread=async_save] Finished saving checkpoint (finalized tmp dir) to `/home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005/6000`. (1286038:atomicity.py:573)
+00:53:33.253 [I] Finished asynchronous save (blocking + background) in 25.82 seconds to /home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005/6000 (1286038:async_checkpointer.py:412)
+00:53:33.253 [I] [process=0][thread=async_save] Background save thread done.                      (1286038:async_checkpointer.py:143)
+00:53:33.254 [I] [process=0][thread=save_finalize] Done with waiting for background save thread=async_save. (1286038:async_checkpointer.py:266)
+00:53:33.254 [I] [process=0][thread=save_finalize] No errors found in background save thread=async_save. (1286038:async_checkpointer.py:276)
+00:53:33.254 [I] [process=0][thread=save_finalize][step=6000] CheckpointManager Save Finalize is syncing with other hosts... (1286038:checkpoint_manager.py:2095)
+00:53:33.255 [I] [process=0][thread=save_finalize][step=6000] CheckpointManager Save Finalize is done on all hosts. (1286038:checkpoint_manager.py:2110)
+ 70%|███████████████████████████████████████████████████                      | 7000/10000 [56:30<23:49,  2.10it/s]01:01:10.600 [I] [process=0][thread=MainThread][wait_until_finished] No Save Finalize thread to wait for. Returning. (1286038:checkpoint_manager.py:1987)
+Step 6050: grad_norm=0.5363, loss=0.0135, param_norm=1938.7791
+Step 6100: grad_norm=0.6287, loss=0.0178, param_norm=1938.7809
+Step 6150: grad_norm=0.5747, loss=0.0156, param_norm=1938.7827
+Step 6200: grad_norm=0.5104, loss=0.0132, param_norm=1938.7843
+Step 6250: grad_norm=0.4722, loss=0.0130, param_norm=1938.7869
+Step 6300: grad_norm=0.4579, loss=0.0114, param_norm=1938.7885
+Step 6350: grad_norm=0.6107, loss=0.0177, param_norm=1938.7899
+Step 6400: grad_norm=0.5705, loss=0.0157, param_norm=1938.7920
+Step 6450: grad_norm=0.4417, loss=0.0107, param_norm=1938.7941
+Step 6500: grad_norm=0.5655, loss=0.0138, param_norm=1938.7963
+Step 6550: grad_norm=0.4478, loss=0.0115, param_norm=1938.7975
+Step 6600: grad_norm=0.4287, loss=0.0098, param_norm=1938.7991
+Step 6650: grad_norm=0.5230, loss=0.0138, param_norm=1938.8008
+Step 6700: grad_norm=0.5364, loss=0.0141, param_norm=1938.8033
+Step 6750: grad_norm=0.5463, loss=0.0136, param_norm=1938.8049
+Step 6800: grad_norm=0.6678, loss=0.0181, param_norm=1938.8065
+Step 6850: grad_norm=0.6225, loss=0.0185, param_norm=1938.8080
+Step 6900: grad_norm=0.4582, loss=0.0102, param_norm=1938.8097
+Step 6950: grad_norm=0.5253, loss=0.0134, param_norm=1938.8112
+Step 7000: grad_norm=0.5374, loss=0.0175, param_norm=1938.8134
+01:01:10.600 [I] [process=0] Saving checkpoint at step 7000                                       (1286038:checkpoint_manager.py:1408)
+01:01:10.601 [I] [process=0] Started async saving checkpoint to /home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005/7000. (1286038:async_checkpointer.py:439)
+01:01:10.614 [I] Creating tmp directory /home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005/7000.orbax-checkpoint-tmp-24 (1286038:atomicity.py:144)
+01:01:10.625 [I] Creating tmp directory /home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005/7000.orbax-checkpoint-tmp-24/assets.orbax-checkpoint-tmp-25 (1286038:atomicity.py:144)
+01:01:10.629 [I] Creating tmp directory /home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005/7000.orbax-checkpoint-tmp-24/train_state.orbax-checkpoint-tmp-27 (1286038:atomicity.py:144)
+01:01:10.634 [I] Transferring arrays to host memory with options: use_replica_parallel=True, enable_pinned_host_transfer=False (1286038:replica_slices.py:341)
+01:01:10.635 [I] Creating tmp directory /home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005/7000.orbax-checkpoint-tmp-24/params.orbax-checkpoint-tmp-26 (1286038:atomicity.py:144)
+01:01:14.463 [I] Transferring arrays to host memory with options: use_replica_parallel=True, enable_pinned_host_transfer=False (1286038:replica_slices.py:341)
+01:01:14.468 [I] Array name: 'params.PaliGemma.llm.layers.mlp.gating_einsum.value', global shape: (18, 2, 2048, 16384), write shape: (18, 2, 2048, 16384), chosen chunk shape: (18, 2, 2048, 8192) (1286038:tensorstore_utils.py:408)
+01:01:14.539 [I] [process=0][thread=array_type_handler] Wrote 71 array_metadata.ArrayMetadata to /home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005/7000.orbax-checkpoint-tmp-24/params.orbax-checkpoint-tmp-26/array_metadatas/process_0 (1286038:array_metadata_store.py:198)
+01:01:16.452 [I] [process=0] /jax/checkpoint/write/blocking_bytes_per_sec: 1.2 GiB/s (total bytes: 7.2 GiB) (time elapsed: 5 seconds) (per-host) (1286038:base_pytree_checkpoint_handler.py:114)
+01:01:16.465 [I] [process=0] /jax/checkpoint/write/blocking_bytes_per_sec: 608.8 MiB/s (total bytes: 3.5 GiB) (time elapsed: 5 seconds) (per-host) (1286038:base_pytree_checkpoint_handler.py:114)
+01:01:16.476 [I] [process=0][thread=async_save] Background save thread started.                   (1286038:async_checkpointer.py:77)
+01:01:16.476 [I] Finished blocking save in 5.88 seconds. Continuing to save asynchronously to /home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005/7000. (1286038:async_checkpointer.py:548)
+01:01:16.479 [I] Preserving Checkpoint[step=5000 | time=2026-09-25 15:45:10.597786+00:00]: (Reason: on keep_period=5000). (1286038:checkpoint_manager.py:1949)
+01:01:16.479 [I] Deleting Checkpoint[step=6000 | time=2026-09-25 15:53:13.260285+00:00]: (Reason: old checkpoint). (1286038:checkpoint_manager.py:1963)
+01:01:16.480 [I] [process=0][thread=MainThread][step=7000] Starting CheckpointManager Save Finalize thread=save_finalize (1286038:checkpoint_manager.py:1453)
+01:01:16.481 [I] [process=0][thread=save_finalize] Waiting for background save thread=async_save. (1286038:async_checkpointer.py:258)
+01:01:16.482 [I] {'step': 7000, 'event_type': 'save', 'directory': '/home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005', 'reached_preemption': False, 'preemption_received_at': None, 'synchronous': False, 'wait_for_prev_start_time': 1790352070.6000302, 'wait_for_prev_duration_secs': 0.00030875205993652344, 'checkpointer_blocking_start_time': 1790352070.6009924, 'checkpointer_blocking_duration_secs': 5.877996444702148, 'get_old_steps_start_time': 1790352076.479075, 'get_old_steps_duration_secs': 0.0016236305236816406, 'checkpoint_manager_blocking_start_time': 1790352070.599627, 'checkpoint_manager_blocking_duration_secs': 5.88289737701416} (1286038:standard_logger.py:34)
+ 70%|█████████████████████████████████████████████████▋                     | 7001/10000 [56:36<1:54:44,  2.30s/it]01:01:16.580 [I] [process=0][thread=array_type_handler] Wrote 105 array_metadata.ArrayMetadata to /home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005/7000.orbax-checkpoint-tmp-24/train_state.orbax-checkpoint-tmp-27/array_metadatas/process_0 (1286038:array_metadata_store.py:198)
+ 70%|███████████████████████████████████████████████████▍                     | 7043/10000 [56:56<23:25,  2.10it/s]01:01:36.351 [I] [process=0] /jax/checkpoint/write/bytes_per_sec: 286.7 MiB/s (total bytes: 7.2 GiB) (time elapsed: 25 seconds) (per-host) (1286038:base_pytree_checkpoint_handler.py:114)
+01:01:36.351 [I] [process=0] /jax/checkpoint/write/bytes_per_sec: 138.4 MiB/s (total bytes: 3.5 GiB) (time elapsed: 25 seconds) (per-host) (1286038:base_pytree_checkpoint_handler.py:114)
+01:01:36.351 [I] [process=0][thread=async_save] 5 Handler Commit operations completed.            (1286038:async_checkpointer.py:87)
+01:01:36.352 [I] Renaming /home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005/7000.orbax-checkpoint-tmp-24/assets.orbax-checkpoint-tmp-25 to /home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005/7000.orbax-checkpoint-tmp-24/assets (1286038:atomicity.py:289)
+01:01:36.356 [I] [process=0][thread=async_save] Skipped cross-host ArrayMetadata validation because only one process is found: process_index=0. (1286038:array_metadata_store.py:362)
+01:01:36.368 [I] Renaming /home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005/7000.orbax-checkpoint-tmp-24/train_state.orbax-checkpoint-tmp-27 to /home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005/7000.orbax-checkpoint-tmp-24/train_state (1286038:atomicity.py:289)
+01:01:36.371 [I] [process=0][thread=async_save] Skipped cross-host ArrayMetadata validation because only one process is found: process_index=0. (1286038:array_metadata_store.py:362)
+01:01:36.386 [I] Renaming /home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005/7000.orbax-checkpoint-tmp-24/params.orbax-checkpoint-tmp-26 to /home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005/7000.orbax-checkpoint-tmp-24/params (1286038:atomicity.py:289)
+01:01:36.386 [I] Renaming /home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005/7000.orbax-checkpoint-tmp-24 to /home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005/7000 (1286038:atomicity.py:289)
+01:01:36.388 [I] [process=0][thread=async_save] Finished saving checkpoint (finalized tmp dir) to `/home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005/7000`. (1286038:atomicity.py:573)
+01:01:36.388 [I] Finished asynchronous save (blocking + background) in 25.79 seconds to /home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005/7000 (1286038:async_checkpointer.py:412)
+01:01:36.388 [I] [process=0][thread=async_save] Background save thread done.                      (1286038:async_checkpointer.py:143)
+01:01:36.388 [I] [process=0][thread=save_finalize] Done with waiting for background save thread=async_save. (1286038:async_checkpointer.py:266)
+01:01:36.389 [I] [process=0][thread=save_finalize] No errors found in background save thread=async_save. (1286038:async_checkpointer.py:276)
+ 70%|███████████████████████████████████████████████████▍                     | 7046/10000 [56:57<23:23,  2.10it/s]01:01:37.844 [I] Deleted step 6000.                                                               (1286038:deleter.py:114)
+01:01:37.844 [I] [process=0][thread=save_finalize][step=7000] CheckpointManager Save Finalize is syncing with other hosts... (1286038:checkpoint_manager.py:2095)
+01:01:37.844 [I] [process=0][thread=save_finalize][step=7000] CheckpointManager Save Finalize is done on all hosts. (1286038:checkpoint_manager.py:2110)
+ 80%|████████████████████████████████████████████████████████▊              | 8000/10000 [1:04:33<15:52,  2.10it/s]01:09:13.649 [I] [process=0][thread=MainThread][wait_until_finished] No Save Finalize thread to wait for. Returning. (1286038:checkpoint_manager.py:1987)
+Step 7050: grad_norm=0.5774, loss=0.0142, param_norm=1938.8148
+Step 7100: grad_norm=0.5967, loss=0.0188, param_norm=1938.8167
+Step 7150: grad_norm=0.5034, loss=0.0142, param_norm=1938.8187
+Step 7200: grad_norm=0.4692, loss=0.0098, param_norm=1938.8203
+Step 7250: grad_norm=0.4946, loss=0.0124, param_norm=1938.8218
+Step 7300: grad_norm=0.4501, loss=0.0105, param_norm=1938.8232
+Step 7350: grad_norm=0.4787, loss=0.0127, param_norm=1938.8248
+Step 7400: grad_norm=0.5224, loss=0.0159, param_norm=1938.8271
+Step 7450: grad_norm=0.6368, loss=0.0199, param_norm=1938.8284
+Step 7500: grad_norm=0.4805, loss=0.0108, param_norm=1938.8293
+Step 7550: grad_norm=0.4936, loss=0.0116, param_norm=1938.8311
+Step 7600: grad_norm=0.5272, loss=0.0133, param_norm=1938.8326
+Step 7650: grad_norm=0.5525, loss=0.0163, param_norm=1938.8340
+Step 7700: grad_norm=0.5734, loss=0.0166, param_norm=1938.8362
+Step 7750: grad_norm=0.3322, loss=0.0066, param_norm=1938.8372
+Step 7800: grad_norm=0.5536, loss=0.0175, param_norm=1938.8389
+Step 7850: grad_norm=0.5248, loss=0.0131, param_norm=1938.8406
+Step 7900: grad_norm=0.8988, loss=0.0253, param_norm=1938.8423
+Step 7950: grad_norm=0.3989, loss=0.0081, param_norm=1938.8438
+Step 8000: grad_norm=0.4732, loss=0.0118, param_norm=1938.8466
+01:09:13.649 [I] [process=0] Saving checkpoint at step 8000                                       (1286038:checkpoint_manager.py:1408)
+01:09:13.650 [I] [process=0] Started async saving checkpoint to /home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005/8000. (1286038:async_checkpointer.py:439)
+01:09:13.663 [I] Creating tmp directory /home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005/8000.orbax-checkpoint-tmp-28 (1286038:atomicity.py:144)
+01:09:13.679 [I] Creating tmp directory /home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005/8000.orbax-checkpoint-tmp-28/assets.orbax-checkpoint-tmp-29 (1286038:atomicity.py:144)
+01:09:13.679 [I] Creating tmp directory /home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005/8000.orbax-checkpoint-tmp-28/params.orbax-checkpoint-tmp-30 (1286038:atomicity.py:144)
+01:09:13.680 [I] Creating tmp directory /home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005/8000.orbax-checkpoint-tmp-28/train_state.orbax-checkpoint-tmp-31 (1286038:atomicity.py:144)
+01:09:13.685 [I] Transferring arrays to host memory with options: use_replica_parallel=True, enable_pinned_host_transfer=False (1286038:replica_slices.py:341)
+01:09:17.485 [I] Transferring arrays to host memory with options: use_replica_parallel=True, enable_pinned_host_transfer=False (1286038:replica_slices.py:341)
+01:09:17.489 [I] Array name: 'params.PaliGemma.llm.layers.mlp.gating_einsum.value', global shape: (18, 2, 2048, 16384), write shape: (18, 2, 2048, 16384), chosen chunk shape: (18, 2, 2048, 8192) (1286038:tensorstore_utils.py:408)
+01:09:17.566 [I] [process=0][thread=array_type_handler] Wrote 71 array_metadata.ArrayMetadata to /home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005/8000.orbax-checkpoint-tmp-28/params.orbax-checkpoint-tmp-30/array_metadatas/process_0 (1286038:array_metadata_store.py:198)
+01:09:19.364 [I] [process=0] /jax/checkpoint/write/blocking_bytes_per_sec: 1.3 GiB/s (total bytes: 7.2 GiB) (time elapsed: 5 seconds) (per-host) (1286038:base_pytree_checkpoint_handler.py:114)
+01:09:19.371 [I] [process=0] /jax/checkpoint/write/blocking_bytes_per_sec: 624.0 MiB/s (total bytes: 3.5 GiB) (time elapsed: 5 seconds) (per-host) (1286038:base_pytree_checkpoint_handler.py:114)
+01:09:19.378 [I] [process=0][thread=async_save] Background save thread started.                   (1286038:async_checkpointer.py:77)
+01:09:19.378 [I] Finished blocking save in 5.73 seconds. Continuing to save asynchronously to /home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005/8000. (1286038:async_checkpointer.py:548)
+01:09:19.380 [I] Preserving Checkpoint[step=5000 | time=2026-09-25 15:45:10.597786+00:00]: (Reason: on keep_period=5000). (1286038:checkpoint_manager.py:1949)
+01:09:19.381 [I] Deleting Checkpoint[step=7000 | time=2026-09-25 16:01:16.479035+00:00]: (Reason: old checkpoint). (1286038:checkpoint_manager.py:1963)
+01:09:19.382 [I] [process=0][thread=MainThread][step=8000] Starting CheckpointManager Save Finalize thread=save_finalize (1286038:checkpoint_manager.py:1453)
+01:09:19.384 [I] [process=0][thread=save_finalize] Waiting for background save thread=async_save. (1286038:async_checkpointer.py:258)
+01:09:19.384 [I] {'step': 8000, 'event_type': 'save', 'directory': '/home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005', 'reached_preemption': False, 'preemption_received_at': None, 'synchronous': False, 'wait_for_prev_start_time': 1790352553.649133, 'wait_for_prev_duration_secs': 0.0003058910369873047, 'checkpointer_blocking_start_time': 1790352553.6500852, 'checkpointer_blocking_duration_secs': 5.730437517166138, 'get_old_steps_start_time': 1790352559.3805666, 'get_old_steps_duration_secs': 0.0017664432525634766, 'checkpoint_manager_blocking_start_time': 1790352553.64873, 'checkpoint_manager_blocking_duration_secs': 5.73581337928772} (1286038:standard_logger.py:34)
+ 80%|███████████████████████████████████████████████████████▏             | 8001/10000 [1:04:39<1:15:00,  2.25s/it]01:09:19.507 [I] [process=0][thread=array_type_handler] Wrote 105 array_metadata.ArrayMetadata to /home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005/8000.orbax-checkpoint-tmp-28/train_state.orbax-checkpoint-tmp-31/array_metadatas/process_0 (1286038:array_metadata_store.py:198)
+ 80%|█████████████████████████████████████████████████████████              | 8042/10000 [1:04:58<15:29,  2.11it/s]01:09:38.921 [I] [process=0] /jax/checkpoint/write/bytes_per_sec: 292.2 MiB/s (total bytes: 7.2 GiB) (time elapsed: 25 seconds) (per-host) (1286038:base_pytree_checkpoint_handler.py:114)
+01:09:38.922 [I] [process=0] /jax/checkpoint/write/bytes_per_sec: 141.0 MiB/s (total bytes: 3.5 GiB) (time elapsed: 25 seconds) (per-host) (1286038:base_pytree_checkpoint_handler.py:114)
+01:09:38.922 [I] [process=0][thread=async_save] 5 Handler Commit operations completed.            (1286038:async_checkpointer.py:87)
+01:09:38.923 [I] Renaming /home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005/8000.orbax-checkpoint-tmp-28/assets.orbax-checkpoint-tmp-29 to /home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005/8000.orbax-checkpoint-tmp-28/assets (1286038:atomicity.py:289)
+01:09:38.927 [I] [process=0][thread=async_save] Skipped cross-host ArrayMetadata validation because only one process is found: process_index=0. (1286038:array_metadata_store.py:362)
+01:09:38.940 [I] Renaming /home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005/8000.orbax-checkpoint-tmp-28/train_state.orbax-checkpoint-tmp-31 to /home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005/8000.orbax-checkpoint-tmp-28/train_state (1286038:atomicity.py:289)
+01:09:38.943 [I] [process=0][thread=async_save] Skipped cross-host ArrayMetadata validation because only one process is found: process_index=0. (1286038:array_metadata_store.py:362)
+01:09:38.955 [I] Renaming /home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005/8000.orbax-checkpoint-tmp-28/params.orbax-checkpoint-tmp-30 to /home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005/8000.orbax-checkpoint-tmp-28/params (1286038:atomicity.py:289)
+01:09:38.956 [I] Renaming /home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005/8000.orbax-checkpoint-tmp-28 to /home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005/8000 (1286038:atomicity.py:289)
+01:09:38.957 [I] [process=0][thread=async_save] Finished saving checkpoint (finalized tmp dir) to `/home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005/8000`. (1286038:atomicity.py:573)
+01:09:38.957 [I] Finished asynchronous save (blocking + background) in 25.31 seconds to /home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005/8000 (1286038:async_checkpointer.py:412)
+01:09:38.957 [I] [process=0][thread=async_save] Background save thread done.                      (1286038:async_checkpointer.py:143)
+01:09:38.958 [I] [process=0][thread=save_finalize] Done with waiting for background save thread=async_save. (1286038:async_checkpointer.py:266)
+01:09:38.958 [I] [process=0][thread=save_finalize] No errors found in background save thread=async_save. (1286038:async_checkpointer.py:276)
+ 80%|█████████████████████████████████████████████████████████              | 8045/10000 [1:04:59<15:30,  2.10it/s]01:09:40.430 [I] Deleted step 7000.                                                               (1286038:deleter.py:114)
+01:09:40.431 [I] [process=0][thread=save_finalize][step=8000] CheckpointManager Save Finalize is syncing with other hosts... (1286038:checkpoint_manager.py:2095)
+01:09:40.431 [I] [process=0][thread=save_finalize][step=8000] CheckpointManager Save Finalize is done on all hosts. (1286038:checkpoint_manager.py:2110)
+ 90%|███████████████████████████████████████████████████████████████▉       | 9000/10000 [1:12:36<07:57,  2.10it/s]01:17:16.408 [I] [process=0][thread=MainThread][wait_until_finished] No Save Finalize thread to wait for. Returning. (1286038:checkpoint_manager.py:1987)
+Step 8050: grad_norm=0.4526, loss=0.0117, param_norm=1938.8479
+Step 8100: grad_norm=0.5221, loss=0.0130, param_norm=1938.8496
+Step 8150: grad_norm=0.4895, loss=0.0151, param_norm=1938.8506
+Step 8200: grad_norm=0.4850, loss=0.0130, param_norm=1938.8518
+Step 8250: grad_norm=0.4371, loss=0.0117, param_norm=1938.8530
+Step 8300: grad_norm=0.4766, loss=0.0132, param_norm=1938.8545
+Step 8350: grad_norm=0.4543, loss=0.0118, param_norm=1938.8563
+Step 8400: grad_norm=0.5040, loss=0.0134, param_norm=1938.8580
+Step 8450: grad_norm=0.4439, loss=0.0119, param_norm=1938.8596
+Step 8500: grad_norm=0.4867, loss=0.0119, param_norm=1938.8616
+Step 8550: grad_norm=0.4153, loss=0.0097, param_norm=1938.8635
+Step 8600: grad_norm=0.4684, loss=0.0125, param_norm=1938.8645
+Step 8650: grad_norm=0.4145, loss=0.0100, param_norm=1938.8656
+Step 8700: grad_norm=0.4355, loss=0.0091, param_norm=1938.8672
+Step 8750: grad_norm=0.3893, loss=0.0105, param_norm=1938.8680
+Step 8800: grad_norm=0.4573, loss=0.0105, param_norm=1938.8690
+Step 8850: grad_norm=0.4143, loss=0.0094, param_norm=1938.8711
+Step 8900: grad_norm=0.4445, loss=0.0096, param_norm=1938.8722
+Step 8950: grad_norm=0.5421, loss=0.0144, param_norm=1938.8734
+Step 9000: grad_norm=0.4351, loss=0.0103, param_norm=1938.8752
+01:17:16.410 [I] [process=0] Saving checkpoint at step 9000                                       (1286038:checkpoint_manager.py:1408)
+01:17:16.412 [I] [process=0] Started async saving checkpoint to /home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005/9000. (1286038:async_checkpointer.py:439)
+01:17:16.435 [I] Creating tmp directory /home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005/9000.orbax-checkpoint-tmp-32 (1286038:atomicity.py:144)
+01:17:16.440 [I] Creating tmp directory /home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005/9000.orbax-checkpoint-tmp-32/assets.orbax-checkpoint-tmp-33 (1286038:atomicity.py:144)
+01:17:16.440 [I] Creating tmp directory /home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005/9000.orbax-checkpoint-tmp-32/params.orbax-checkpoint-tmp-34 (1286038:atomicity.py:144)
+01:17:16.441 [I] Creating tmp directory /home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005/9000.orbax-checkpoint-tmp-32/train_state.orbax-checkpoint-tmp-35 (1286038:atomicity.py:144)
+01:17:16.472 [I] Transferring arrays to host memory with options: use_replica_parallel=True, enable_pinned_host_transfer=False (1286038:replica_slices.py:341)
+01:17:20.287 [I] Transferring arrays to host memory with options: use_replica_parallel=True, enable_pinned_host_transfer=False (1286038:replica_slices.py:341)
+01:17:20.297 [I] Array name: 'params.PaliGemma.llm.layers.mlp.gating_einsum.value', global shape: (18, 2, 2048, 16384), write shape: (18, 2, 2048, 16384), chosen chunk shape: (18, 2, 2048, 8192) (1286038:tensorstore_utils.py:408)
+01:17:20.399 [I] [process=0][thread=array_type_handler] Wrote 71 array_metadata.ArrayMetadata to /home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005/9000.orbax-checkpoint-tmp-32/params.orbax-checkpoint-tmp-34/array_metadatas/process_0 (1286038:array_metadata_store.py:198)
+01:17:22.227 [I] [process=0] /jax/checkpoint/write/blocking_bytes_per_sec: 1.2 GiB/s (total bytes: 7.2 GiB) (time elapsed: 5 seconds) (per-host) (1286038:base_pytree_checkpoint_handler.py:114)
+01:17:22.236 [I] [process=0] /jax/checkpoint/write/blocking_bytes_per_sec: 613.8 MiB/s (total bytes: 3.5 GiB) (time elapsed: 5 seconds) (per-host) (1286038:base_pytree_checkpoint_handler.py:114)
+01:17:22.245 [I] [process=0][thread=async_save] Background save thread started.                   (1286038:async_checkpointer.py:77)
+01:17:22.246 [I] Finished blocking save in 5.84 seconds. Continuing to save asynchronously to /home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005/9000. (1286038:async_checkpointer.py:548)
+01:17:22.248 [I] Preserving Checkpoint[step=5000 | time=2026-09-25 15:45:10.597786+00:00]: (Reason: on keep_period=5000). (1286038:checkpoint_manager.py:1949)
+01:17:22.248 [I] Deleting Checkpoint[step=8000 | time=2026-09-25 16:09:19.380550+00:00]: (Reason: old checkpoint). (1286038:checkpoint_manager.py:1963)
+01:17:22.249 [I] [process=0][thread=MainThread][step=9000] Starting CheckpointManager Save Finalize thread=save_finalize (1286038:checkpoint_manager.py:1453)
+01:17:22.250 [I] [process=0][thread=save_finalize] Waiting for background save thread=async_save. (1286038:async_checkpointer.py:258)
+01:17:22.251 [I] {'step': 9000, 'event_type': 'save', 'directory': '/home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005', 'reached_preemption': False, 'preemption_received_at': None, 'synchronous': False, 'wait_for_prev_start_time': 1790353036.4089031, 'wait_for_prev_duration_secs': 0.0006237030029296875, 'checkpointer_blocking_start_time': 1790353036.4108996, 'checkpointer_blocking_duration_secs': 5.836980819702148, 'get_old_steps_start_time': 1790353042.2479444, 'get_old_steps_duration_secs': 0.0014302730560302734, 'checkpoint_manager_blocking_start_time': 1790353036.4081686, 'checkpoint_manager_blocking_duration_secs': 5.843385934829712} (1286038:standard_logger.py:34)
+ 90%|███████████████████████████████████████████████████████████████▉       | 9001/10000 [1:12:42<38:08,  2.29s/it]01:17:22.337 [I] [process=0][thread=array_type_handler] Wrote 105 array_metadata.ArrayMetadata to /home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005/9000.orbax-checkpoint-tmp-32/train_state.orbax-checkpoint-tmp-35/array_metadatas/process_0 (1286038:array_metadata_store.py:198)
+ 90%|████████████████████████████████████████████████████████████████▏      | 9041/10000 [1:13:00<07:36,  2.10it/s]01:17:41.214 [I] [process=0] /jax/checkpoint/write/bytes_per_sec: 297.7 MiB/s (total bytes: 7.2 GiB) (time elapsed: 24 seconds) (per-host) (1286038:base_pytree_checkpoint_handler.py:114)
+01:17:41.214 [I] [process=0] /jax/checkpoint/write/bytes_per_sec: 143.8 MiB/s (total bytes: 3.5 GiB) (time elapsed: 24 seconds) (per-host) (1286038:base_pytree_checkpoint_handler.py:114)
+01:17:41.215 [I] [process=0][thread=async_save] 5 Handler Commit operations completed.            (1286038:async_checkpointer.py:87)
+01:17:41.216 [I] Renaming /home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005/9000.orbax-checkpoint-tmp-32/assets.orbax-checkpoint-tmp-33 to /home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005/9000.orbax-checkpoint-tmp-32/assets (1286038:atomicity.py:289)
+01:17:41.220 [I] [process=0][thread=async_save] Skipped cross-host ArrayMetadata validation because only one process is found: process_index=0. (1286038:array_metadata_store.py:362)
+01:17:41.234 [I] Renaming /home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005/9000.orbax-checkpoint-tmp-32/train_state.orbax-checkpoint-tmp-35 to /home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005/9000.orbax-checkpoint-tmp-32/train_state (1286038:atomicity.py:289)
+01:17:41.236 [I] [process=0][thread=async_save] Skipped cross-host ArrayMetadata validation because only one process is found: process_index=0. (1286038:array_metadata_store.py:362)
+01:17:41.249 [I] Renaming /home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005/9000.orbax-checkpoint-tmp-32/params.orbax-checkpoint-tmp-34 to /home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005/9000.orbax-checkpoint-tmp-32/params (1286038:atomicity.py:289)
+01:17:41.249 [I] Renaming /home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005/9000.orbax-checkpoint-tmp-32 to /home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005/9000 (1286038:atomicity.py:289)
+01:17:41.250 [I] [process=0][thread=async_save] Finished saving checkpoint (finalized tmp dir) to `/home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005/9000`. (1286038:atomicity.py:573)
+01:17:41.250 [I] Finished asynchronous save (blocking + background) in 24.84 seconds to /home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005/9000 (1286038:async_checkpointer.py:412)
+01:17:41.251 [I] [process=0][thread=async_save] Background save thread done.                      (1286038:async_checkpointer.py:143)
+01:17:41.251 [I] [process=0][thread=save_finalize] Done with waiting for background save thread=async_save. (1286038:async_checkpointer.py:266)
+01:17:41.251 [I] [process=0][thread=save_finalize] No errors found in background save thread=async_save. (1286038:async_checkpointer.py:276)
+ 90%|████████████████████████████████████████████████████████████████▏      | 9044/10000 [1:13:02<07:34,  2.10it/s]01:17:42.795 [I] Deleted step 8000.                                                               (1286038:deleter.py:114)
+01:17:42.796 [I] [process=0][thread=save_finalize][step=9000] CheckpointManager Save Finalize is syncing with other hosts... (1286038:checkpoint_manager.py:2095)
+01:17:42.796 [I] [process=0][thread=save_finalize][step=9000] CheckpointManager Save Finalize is done on all hosts. (1286038:checkpoint_manager.py:2110)
+100%|██████████████████████████████████████████████████████████████████████▉| 9999/10000 [1:20:37<00:00,  2.10it/s]01:25:18.069 [I] [process=0][thread=MainThread][wait_until_finished] No Save Finalize thread to wait for. Returning. (1286038:checkpoint_manager.py:1987)
+Step 9050: grad_norm=0.4353, loss=0.0084, param_norm=1938.8765
+Step 9100: grad_norm=0.5148, loss=0.0162, param_norm=1938.8781
+Step 9150: grad_norm=0.4458, loss=0.0091, param_norm=1938.8796
+Step 9200: grad_norm=0.4470, loss=0.0123, param_norm=1938.8812
+Step 9250: grad_norm=0.4753, loss=0.0105, param_norm=1938.8824
+Step 9300: grad_norm=0.4579, loss=0.0110, param_norm=1938.8837
+Step 9350: grad_norm=0.3761, loss=0.0091, param_norm=1938.8853
+Step 9400: grad_norm=0.3988, loss=0.0096, param_norm=1938.8867
+Step 9450: grad_norm=0.3246, loss=0.0065, param_norm=1938.8881
+Step 9500: grad_norm=0.4682, loss=0.0129, param_norm=1938.8890
+Step 9550: grad_norm=0.4234, loss=0.0094, param_norm=1938.8909
+Step 9600: grad_norm=0.4535, loss=0.0123, param_norm=1938.8928
+Step 9650: grad_norm=0.4554, loss=0.0112, param_norm=1938.8942
+Step 9700: grad_norm=0.3291, loss=0.0061, param_norm=1938.8949
+Step 9750: grad_norm=0.5114, loss=0.0156, param_norm=1938.8965
+Step 9800: grad_norm=0.5054, loss=0.0134, param_norm=1938.8978
+Step 9850: grad_norm=0.4179, loss=0.0104, param_norm=1938.8988
+Step 9900: grad_norm=0.3570, loss=0.0082, param_norm=1938.8999
+Step 9950: grad_norm=0.4752, loss=0.0107, param_norm=1938.9006
+01:25:18.070 [I] [process=0] Saving checkpoint at step 9999                                       (1286038:checkpoint_manager.py:1408)
+01:25:18.070 [I] [process=0] Started async saving checkpoint to /home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005/9999. (1286038:async_checkpointer.py:439)
+01:25:18.074 [I] Creating tmp directory /home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005/9999.orbax-checkpoint-tmp-36 (1286038:atomicity.py:144)
+01:25:18.093 [I] Creating tmp directory /home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005/9999.orbax-checkpoint-tmp-36/assets.orbax-checkpoint-tmp-37 (1286038:atomicity.py:144)
+01:25:18.094 [I] Creating tmp directory /home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005/9999.orbax-checkpoint-tmp-36/params.orbax-checkpoint-tmp-38 (1286038:atomicity.py:144)
+01:25:18.098 [I] Creating tmp directory /home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005/9999.orbax-checkpoint-tmp-36/train_state.orbax-checkpoint-tmp-39 (1286038:atomicity.py:144)
+01:25:18.113 [I] Transferring arrays to host memory with options: use_replica_parallel=True, enable_pinned_host_transfer=False (1286038:replica_slices.py:341)
+01:25:22.013 [I] Transferring arrays to host memory with options: use_replica_parallel=True, enable_pinned_host_transfer=False (1286038:replica_slices.py:341)
+01:25:22.018 [I] Array name: 'params.PaliGemma.llm.layers.mlp.gating_einsum.value', global shape: (18, 2, 2048, 16384), write shape: (18, 2, 2048, 16384), chosen chunk shape: (18, 2, 2048, 8192) (1286038:tensorstore_utils.py:408)
+01:25:22.077 [I] [process=0][thread=array_type_handler] Wrote 71 array_metadata.ArrayMetadata to /home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005/9999.orbax-checkpoint-tmp-36/params.orbax-checkpoint-tmp-38/array_metadatas/process_0 (1286038:array_metadata_store.py:198)
+01:25:24.148 [I] [process=0] /jax/checkpoint/write/blocking_bytes_per_sec: 1.2 GiB/s (total bytes: 7.2 GiB) (time elapsed: 6 seconds) (per-host) (1286038:base_pytree_checkpoint_handler.py:114)
+01:25:24.154 [I] [process=0] /jax/checkpoint/write/blocking_bytes_per_sec: 586.9 MiB/s (total bytes: 3.5 GiB) (time elapsed: 6 seconds) (per-host) (1286038:base_pytree_checkpoint_handler.py:114)
+01:25:24.158 [I] [process=0][thread=async_save] Background save thread started.                   (1286038:async_checkpointer.py:77)
+01:25:24.158 [I] Finished blocking save in 6.09 seconds. Continuing to save asynchronously to /home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005/9999. (1286038:async_checkpointer.py:548)
+01:25:24.160 [I] Preserving Checkpoint[step=5000 | time=2026-09-25 15:45:10.597786+00:00]: (Reason: on keep_period=5000). (1286038:checkpoint_manager.py:1949)
+01:25:24.160 [I] Deleting Checkpoint[step=9000 | time=2026-09-25 16:17:22.247914+00:00]: (Reason: old checkpoint). (1286038:checkpoint_manager.py:1963)
+01:25:24.161 [I] [process=0][thread=MainThread][step=9999] Starting CheckpointManager Save Finalize thread=save_finalize (1286038:checkpoint_manager.py:1453)
+01:25:24.162 [I] [process=0][thread=save_finalize] Waiting for background save thread=async_save. (1286038:async_checkpointer.py:258)
+01:25:24.162 [I] {'step': 9999, 'event_type': 'save', 'directory': '/home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005', 'reached_preemption': False, 'preemption_received_at': None, 'synchronous': False, 'wait_for_prev_start_time': 1790353518.0690994, 'wait_for_prev_duration_secs': 0.00041103363037109375, 'checkpointer_blocking_start_time': 1790353518.0701597, 'checkpointer_blocking_duration_secs': 6.090087890625, 'get_old_steps_start_time': 1790353524.1602721, 'get_old_steps_duration_secs': 0.0009913444519042969, 'checkpoint_manager_blocking_start_time': 1790353518.0687315, 'checkpoint_manager_blocking_duration_secs': 6.093763828277588} (1286038:standard_logger.py:34)
+100%|██████████████████████████████████████████████████████████████████████| 10000/10000 [1:20:44<00:00,  2.06it/s]
+01:25:24.165 [I] Waiting for checkpoint manager to finish                                         (1286038:train.py:275)
+01:25:24.166 [I] [process=0][thread=MainThread][step=9999][wait_until_finished] Waiting for Save Finalize thread (save_finalize) to complete. (1286038:checkpoint_manager.py:1998)
+01:25:24.234 [I] [process=0][thread=array_type_handler] Wrote 105 array_metadata.ArrayMetadata to /home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005/9999.orbax-checkpoint-tmp-36/train_state.orbax-checkpoint-tmp-39/array_metadatas/process_0 (1286038:array_metadata_store.py:198)
+01:25:41.524 [I] [process=0] /jax/checkpoint/write/bytes_per_sec: 314.8 MiB/s (total bytes: 7.2 GiB) (time elapsed: 23 seconds) (per-host) (1286038:base_pytree_checkpoint_handler.py:114)
+01:25:41.524 [I] [process=0] /jax/checkpoint/write/bytes_per_sec: 152.0 MiB/s (total bytes: 3.5 GiB) (time elapsed: 23 seconds) (per-host) (1286038:base_pytree_checkpoint_handler.py:114)
+01:25:41.524 [I] [process=0][thread=async_save] 5 Handler Commit operations completed.            (1286038:async_checkpointer.py:87)
+01:25:41.525 [I] Renaming /home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005/9999.orbax-checkpoint-tmp-36/assets.orbax-checkpoint-tmp-37 to /home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005/9999.orbax-checkpoint-tmp-36/assets (1286038:atomicity.py:289)
+01:25:41.529 [I] [process=0][thread=async_save] Skipped cross-host ArrayMetadata validation because only one process is found: process_index=0. (1286038:array_metadata_store.py:362)
+01:25:41.547 [I] Renaming /home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005/9999.orbax-checkpoint-tmp-36/train_state.orbax-checkpoint-tmp-39 to /home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005/9999.orbax-checkpoint-tmp-36/train_state (1286038:atomicity.py:289)
+01:25:41.550 [I] [process=0][thread=async_save] Skipped cross-host ArrayMetadata validation because only one process is found: process_index=0. (1286038:array_metadata_store.py:362)
+01:25:41.563 [I] Renaming /home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005/9999.orbax-checkpoint-tmp-36/params.orbax-checkpoint-tmp-38 to /home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005/9999.orbax-checkpoint-tmp-36/params (1286038:atomicity.py:289)
+01:25:41.564 [I] Renaming /home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005/9999.orbax-checkpoint-tmp-36 to /home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005/9999 (1286038:atomicity.py:289)
+01:25:41.565 [I] [process=0][thread=async_save] Finished saving checkpoint (finalized tmp dir) to `/home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005/9999`. (1286038:atomicity.py:573)
+01:25:41.565 [I] Finished asynchronous save (blocking + background) in 23.50 seconds to /home/yina/keon/openpi/checkpoints/pi05_keon_lora/exp_005/9999 (1286038:async_checkpointer.py:412)
+01:25:41.566 [I] [process=0][thread=async_save] Background save thread done.                      (1286038:async_checkpointer.py:143)
+01:25:41.566 [I] [process=0][thread=save_finalize] Done with waiting for background save thread=async_save. (1286038:async_checkpointer.py:266)
+01:25:41.566 [I] [process=0][thread=save_finalize] No errors found in background save thread=async_save. (1286038:async_checkpointer.py:276)
+01:25:43.066 [I] Deleted step 9000.                                                               (1286038:deleter.py:114)
+01:25:43.067 [I] [process=0][thread=save_finalize][step=9999] CheckpointManager Save Finalize is syncing with other hosts... (1286038:checkpoint_manager.py:2095)
+01:25:43.067 [I] [process=0][thread=save_finalize][step=9999] CheckpointManager Save Finalize is done on all hosts. (1286038:checkpoint_manager.py:2110)
+01:25:43.067 [I] [process=0][thread=MainThread][step=9999][wait_until_finished] Done waiting for Save Finalize thread (save_finalize) running at step=9999. (1286038:checkpoint_manager.py:2010)
